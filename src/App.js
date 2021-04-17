@@ -1,5 +1,4 @@
 import React from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from './Theme'
 import { useDarkMode } from './hooks/useDarkMode'
@@ -10,6 +9,7 @@ import Header from './components/Header'
 import Home from './views/Home'
 import Project from './views/Project'
 import Menu from './views/Menu'
+import Footer from './components/Footer'
 
 function App() {
   const [theme, toggleTheme, componentMounted] = useDarkMode()
@@ -29,6 +29,7 @@ function App() {
                 <Route path='/project' component={Project} />
                 <Route exact path='/' component={Home} />
               </Switch>
+              <Footer />
             </Main>
           </Router>
         </Wrapper>

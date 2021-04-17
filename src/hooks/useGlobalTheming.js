@@ -21,6 +21,11 @@ export const GlobalStyle = createGlobalStyle`
     font-family: proxima-nova, sans-serif;
   }
 
+  ::selection {
+    color: #111;
+    background-color: #1bffcd
+  }
+
 `
 
 export const Wrapper = styled.div`
@@ -38,5 +43,6 @@ export const Main = styled.main`
 
   @media (max-width: 720px) {
     width: 100%;
+    padding: 32px 16px;
   }
 `
