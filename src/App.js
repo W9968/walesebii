@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './views/Home'
 import Project from './views/Project'
+import Contact from './views/Contact'
 import Menu from './views/Menu'
 import Footer from './components/Footer'
 
@@ -25,8 +26,9 @@ function App() {
             <Main>
               <Header mode={theme} modeFunc={toggleTheme} />
               <Switch>
-                <Route path='/menu' component={Menu} />
+                <Route path='/contact' component={Contact} />
                 <Route path='/project' component={Project} />
+                <Route path='/menu' component={Menu} />
                 <Route exact path='/' component={Home} />
               </Switch>
               <Footer />

@@ -7,5 +7,5 @@ export const lightTheme = {
 export const darkTheme = {
   text: '#eaeaea',
   body: '#111111',
-  hover: '#444444',
+  hover: '#222222',
 }

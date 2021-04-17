@@ -1,7 +1,12 @@
 import React from 'react'
+import ListMenu from '../components/ListMenu'
 
 const Menu = () => {
-  return <div>menu</div>
+  return (
+    <>
+      <ListMenu />
+    </>
+  )
 }
 
 export default Menu
