@@ -18,12 +18,9 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     color: ${({ theme }) => theme.text};
     background-color: ${({ theme }) => theme.body};
+    font-family: proxima-nova, sans-serif;
   }
 
-  :root {
-    --hovDark: #444;
-    --hovWhite: #efef;
-  }
 `
 
 export const Wrapper = styled.div`

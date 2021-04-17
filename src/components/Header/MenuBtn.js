@@ -13,6 +13,5 @@ const MenuBtn = () => {
 export default MenuBtn
 
 const Command = styled(BiCommand)`
-  margin: 0px 10px;
   font-size: 1.5rem;
 `
