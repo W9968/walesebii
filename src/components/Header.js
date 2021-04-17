@@ -1,35 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
-import { Tooltip } from '@chakra-ui/tooltip'
+import { NavLink, useHistory } from 'react-router-dom'
 
 import Logo from './Header/Logo'
 import MenuBtn from './Header/MenuBtn'
 import Toggle from './Header/Toggle'
 
 const Header = ({ mode, modeFunc }) => {
+  const history = useHistory()
+
   return (
     <>
       <Container>
         <Logo />
         <div className='icons'>
-          <Tooltip
-            hasArrow={true}
-            placement='top'
-            label='M for menu'
-            aria-label='A tooltip'>
-            <Link to='/menu'>
-              <MenuBtn />
-            </Link>
-          </Tooltip>
+          <Link
+            to='/menu'
+            onClick={() => {
+              window.location.pathname === '/menu' && history.goBack()
+            }}>
+            <MenuBtn />
+          </Link>
 
-          <Tooltip
-            hasArrow={true}
-            placement='top'
-            label={`Activate ${mode} mode`}
-            aria-label='A tooltip'>
-            <Toggle theme={mode} toggleTheme={modeFunc} />
-          </Tooltip>
+          <Toggle theme={mode} toggleTheme={modeFunc} />
         </div>
       </Container>
     </>
@@ -61,7 +54,8 @@ const Link = styled(NavLink)`
   justify-content: center;
   color: ${({ theme }) => theme.text};
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: ${({ theme }) => theme.hover};
   }
 `
