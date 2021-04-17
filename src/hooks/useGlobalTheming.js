@@ -1,23 +1,45 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
 
   *, *::after, *::before {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
   }
 
+  html,
   body {  
-    margin: 0px;
-    padding: 0px;
     display:flex;
     max-width: 100%;
     min-height: 100vh;
-    align-items:center;
     flex-direction: column;
-    justify-content:center;
     backface-visibility:hidden;
     text-rendering: optimizeLegibility;
     color: ${({ theme }) => theme.text};
     background-color: ${({ theme }) => theme.body};
+  }
+
+  :root {
+    --hovDark: #444;
+    --hovWhite: #efef;
+  }
+`
+
+export const Wrapper = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  background-color: none;
+`
+
+export const Main = styled.main`
+  width: 720px;
+  min-height: 100vh;
+  margin: 0px auto;
+  padding: 96px 16px;
+  background-color: none;
+
+  @media (max-width: 720px) {
+    width: 100%;
   }
 `
