@@ -1,20 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-const Contact = () => {
+
+const Writings = () => {
   return (
     <Section>
-      <Title>Contact</Title>
+      <Title>Blog</Title>
+      <Parag>A collection of what I know about coding and design</Parag>
     </Section>
   )
 }
 
-export default Contact
+export default Writings
 
 const Section = styled.section`
-  ul {
-    margin: 0px 20px;
-  }
-
   .divider {
     height: 3px;
     width: 100px;
@@ -30,7 +28,7 @@ const Title = styled.h1`
   text-transform: capitalize;
 
   /* gradient */
-  background: -webkit-linear-gradient(right, #7b4397 80%, #dc2430);
+  background: -webkit-linear-gradient(right, #00d2ff 80%, #3a7bd5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `

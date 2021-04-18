@@ -1,6 +1,6 @@
 import React from 'react'
 import MenuItem from './Menu/MenuItem'
-import { BiHomeAlt, BiFile, BiMailSend } from 'react-icons/bi'
+import { BiHomeAlt, BiFile, BiMailSend, BiEdit } from 'react-icons/bi'
 
 const ListMenu = () => {
   return (
@@ -26,4 +26,5 @@ export const paths = [
   { location: '/', name: 'home', icon: <BiHomeAlt />, command: 'a' },
   { location: '/project', name: 'project', icon: <BiFile />, command: 'p' },
   { location: '/contact', name: 'contact', icon: <BiMailSend />, command: 'c' },
+  { location: '/writing', name: 'writing', icon: <BiEdit />, command: 'r' },
 ]

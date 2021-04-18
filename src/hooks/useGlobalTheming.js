@@ -28,6 +28,24 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.select}
   }
 
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+    
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none; 
+  }
+ 
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    filter: contrast(0.75);
+    background: ${({ theme }) => theme.text};
+  }
+
 `
 
 export const Wrapper = styled.div`

@@ -5,13 +5,15 @@ import { useDarkMode } from './hooks/useDarkMode'
 import { GlobalStyle, Wrapper, Main } from './hooks/useGlobalTheming'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Header from './components/Header'
 import Home from './views/Home'
 import Project from './views/Project'
 import Contact from './views/Contact'
 import Meta from './views/Meta'
+import Writings from './views/Writings'
+
 import Menu from './views/Menu'
 import Footer from './components/Footer'
+import Header from './components/Header'
 import Cursor from './hooks/useCursor'
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
             <Main>
               <Header mode={theme} modeFunc={toggleTheme} />
               <Switch>
+                <Route path='/writing' component={Writings} />
                 <Route path='/meta' component={Meta} />
                 <Route path='/contact' component={Contact} />
                 <Route path='/project' component={Project} />
