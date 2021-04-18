@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    cursor: none !important;
   }
 
   html,
@@ -19,11 +20,12 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     background-color: ${({ theme }) => theme.body};
     font-family: proxima-nova, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 
   ::selection {
     color: #111;
-    background-color: #1bffcd
+    background-color: ${({ theme }) => theme.select}
   }
 
 `

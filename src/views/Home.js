@@ -30,6 +30,7 @@ const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: 1px;
+  text-transform: capitalize;
 `
 
 const Parag = styled.p`

@@ -9,8 +9,10 @@ import Header from './components/Header'
 import Home from './views/Home'
 import Project from './views/Project'
 import Contact from './views/Contact'
+import Meta from './views/Meta'
 import Menu from './views/Menu'
 import Footer from './components/Footer'
+import Cursor from './hooks/useCursor'
 
 function App() {
   const [theme, toggleTheme, componentMounted] = useDarkMode()
@@ -21,11 +23,13 @@ function App() {
     return (
       <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
         <GlobalStyle />
+        <Cursor />
         <Wrapper>
           <Router>
             <Main>
               <Header mode={theme} modeFunc={toggleTheme} />
               <Switch>
+                <Route path='/meta' component={Meta} />
                 <Route path='/contact' component={Contact} />
                 <Route path='/project' component={Project} />
                 <Route path='/menu' component={Menu} />

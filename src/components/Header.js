@@ -17,7 +17,7 @@ const Header = ({ mode, modeFunc }) => {
           <Link
             to='/menu'
             onClick={() => {
-              window.location.pathname === '/menu' && history.goBack()
+              window.location.pathname === '/menu' && history.go(-1)
             }}>
             <MenuBtn />
           </Link>

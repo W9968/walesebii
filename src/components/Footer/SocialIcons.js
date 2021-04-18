@@ -1,6 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { AiOutlineTwitter, AiOutlineGithub } from 'react-icons/ai'
+import {
+  AiOutlineTwitter,
+  AiOutlineGithub,
+  AiFillQuestionCircle,
+} from 'react-icons/ai'
+import { NavLink } from 'react-router-dom'
 
 const SocialIcons = () => {
   return (
@@ -18,6 +23,9 @@ const SocialIcons = () => {
           rel='noreferrer'>
           <Github />
         </a>
+        <NavLink to='/meta'>
+          <Info />
+        </NavLink>
       </Social>
     </>
   )
@@ -47,5 +55,14 @@ const Twitter = styled(AiOutlineTwitter)`
 
   &:hover {
     color: #7fdbff;
+  }
+`
+
+const Info = styled(AiFillQuestionCircle)`
+  font-size: 1.5rem;
+  color: ${({ theme }) => theme.text};
+
+  &:hover {
+    color: #1bffcd;
   }
 `
