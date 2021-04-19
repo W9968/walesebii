@@ -1,0 +1,59 @@
+05:18:49.301  	Cloning github.com/jagarkin/jagarkin-portfolio (Branch: main, Commit: 614db20)
+05:18:50.182  	Cloning completed in 881ms
+05:18:50.185  	Analyzing source code...
+05:18:50.591  	Installing build runtime...
+05:18:52.993  	Build runtime installed: 2401.597ms
+05:18:54.755  	Looking up build cache...
+05:18:54.805  	Build cache not found
+05:18:55.515  	Detected package.json
+05:18:55.515  	Installing dependencies...
+05:19:23.106  	> core-js@2.6.12 postinstall /vercel/workpath0/node_modules/babel-runtime/node_modules/core-js
+05:19:23.106  	> node -e "try{require('./postinstall')}catch(e){}"
+05:19:23.179  	[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+05:19:23.179  	[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+05:19:23.179  	[96m>[94m https://opencollective.com/core-js [0m
+05:19:23.179  	[96m>[94m https://www.patreon.com/zloirock [0m
+05:19:23.180  	[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+05:19:23.233  	> core-js@3.10.1 postinstall /vercel/workpath0/node_modules/core-js
+05:19:23.233  	> node -e "try{require('./postinstall')}catch(e){}"
+05:19:23.307  	> core-js-pure@3.10.1 postinstall /vercel/workpath0/node_modules/core-js-pure
+05:19:23.307  	> node -e "try{require('./postinstall')}catch(e){}"
+05:19:23.398  	> ejs@2.7.4 postinstall /vercel/workpath0/node_modules/ejs
+05:19:23.398  	> node ./postinstall.js
+05:19:23.460  	Thank you for installing [35mEJS[0m: built with the [32mJake[0m JavaScript build tool ([32mhttps://jakejs.com/[0m)
+05:19:25.379  	npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/webpack-dev-server/node_modules/fsevents):
+05:19:25.379  	npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+05:19:25.393  	npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
+05:19:25.393  	npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+05:19:25.407  	npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+05:19:25.407  	npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+05:19:25.412  	added 2036 packages from 789 contributors in 29.44s
+05:19:26.604  	137 packages are looking for funding
+05:19:26.604  	  run `npm fund` for details
+05:19:26.847  	Running "npm run build"
+05:19:27.087  	> jagar@0.1.0 build /vercel/workpath0
+05:19:27.088  	> react-scripts build
+05:19:28.310  	Creating an optimized production build...
+05:19:45.720  	Compiled with warnings.
+05:19:45.720  	src/views/Contact.js
+05:19:45.720  	  Line 38:7:  'Parag' is assigned a value but never used  no-unused-vars
+05:19:45.720  	Search for the keywords to learn more about each warning.
+05:19:45.720  	To ignore, add // eslint-disable-next-line to the line before.
+05:19:45.720  	File sizes after gzip:
+05:19:45.739  	  97.61 KB  build/static/js/2.22645b21.chunk.js
+05:19:45.740  	  4.68 KB   build/static/js/main.0c0e57d7.chunk.js
+05:19:45.740  	  770 B     build/static/js/runtime-main.5cbe5368.js
+05:19:45.740  	The project was built assuming it is hosted at /.
+05:19:45.740  	You can control this with the homepage field in your package.json.
+05:19:45.740  	The build folder is ready to be deployed.
+05:19:45.740  	You may serve it with a static server:
+05:19:45.740  	  npm install -g serve
+05:19:45.740  	  serve -s build
+05:19:45.740  	Find out more about deployment here:
+05:19:45.740  	  https://cra.link/deployment
+05:19:46.132  	Uploading build outputs...
+05:19:47.000  	Deploying build outputs...
+05:19:50.268  	Build completed. Populating build cache...
+05:20:05.893  	Uploading build cache [39.06 MB]...
+05:20:06.551  	Build cache uploaded: 657.343ms
+05:20:06.768  	Done with "package.json"

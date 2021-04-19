@@ -1,24 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import { NavLink, useHistory } from 'react-router-dom'
 
 import Logo from './Header/Logo'
 import MenuBtn from './Header/MenuBtn'
 import Toggle from './Header/Toggle'
 
-const Header = ({ mode, modeFunc }) => {
-  const history = useHistory()
+const Header = ({ mode, modeFunc, state }) => {
+  const {
+    toggleMenu: [toggleMenu, setToggleMenu],
+  } = { toggleMenu: useState(false), ...(state || {}) }
 
   return (
     <>
       <Container>
         <Logo />
         <div className='icons'>
-          <Link
-            to='/menu'
-            onClick={() => {
-              window.location.pathname === '/menu' && history.go(-1)
-            }}>
+          <Link onClick={() => setToggleMenu(!toggleMenu)}>
             <MenuBtn />
           </Link>
 
@@ -45,7 +42,7 @@ const Container = styled.div`
   }
 `
 
-const Link = styled(NavLink)`
+const Link = styled.span`
   padding: 10px;
   display: flex;
   flex-direction: row;

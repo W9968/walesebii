@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from './Theme'
 import { useDarkMode } from './hooks/useDarkMode'
@@ -17,6 +17,7 @@ import Header from './components/Header'
 import Cursor from './hooks/useCursor'
 
 function App() {
+  const [toggleMenu, setToggleMenu] = useState()
   const [theme, toggleTheme, componentMounted] = useDarkMode()
 
   if (!componentMounted) {
@@ -29,15 +30,23 @@ function App() {
         <Wrapper>
           <Router>
             <Main>
-              <Header mode={theme} modeFunc={toggleTheme} />
-              <Switch>
-                <Route path='/writing' component={Writings} />
-                <Route path='/meta' component={Meta} />
-                <Route path='/contact' component={Contact} />
-                <Route path='/project' component={Project} />
-                <Route path='/menu' component={Menu} />
-                <Route exact path='/' component={Home} />
-              </Switch>
+              <Header
+                mode={theme}
+                modeFunc={toggleTheme}
+                state={{ toggleMenu: [toggleMenu, setToggleMenu] }}
+              />
+              {toggleMenu ? (
+                <Menu />
+              ) : (
+                <Switch>
+                  <Route path='/writing' component={Writings} />
+                  <Route path='/meta' component={Meta} />
+                  <Route path='/contact' component={Contact} />
+                  <Route path='/project' component={Project} />
+                  <Route exact path='/' component={Home} />
+                </Switch>
+              )}
+
               <Footer />
             </Main>
           </Router>
