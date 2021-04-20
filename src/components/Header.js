@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import Logo from './Header/Logo'
@@ -9,12 +9,6 @@ const Header = ({ mode, modeFunc, state }) => {
   const {
     toggleMenu: [toggleMenu, setToggleMenu],
   } = { toggleMenu: useState(false), ...(state || {}) }
-
-  useEffect(() => {
-    document.addEventListener('keydown', (e) => {
-      e.key === 'm' && setToggleMenu(!toggleMenu)
-    })
-  }, [toggleMenu, setToggleMenu]) // eslint-disable-line
 
   return (
     <>
