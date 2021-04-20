@@ -11,10 +11,11 @@ import Contact from './views/Contact'
 import Meta from './views/Meta'
 import Writings from './views/Writings'
 
-import Menu from './views/Menu'
+import Menu from './components/Menu/Menu'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Cursor from './hooks/useCursor'
+import NotFound from './views/NotFound'
 
 function App() {
   const [toggleMenu, setToggleMenu] = useState()
@@ -36,7 +37,7 @@ function App() {
                 state={{ toggleMenu: [toggleMenu, setToggleMenu] }}
               />
               {toggleMenu ? (
-                <Menu />
+                <Menu state={{ toggleMenu: [toggleMenu, setToggleMenu] }} />
               ) : (
                 <Switch>
                   <Route path='/writing' component={Writings} />
@@ -44,6 +45,7 @@ function App() {
                   <Route path='/contact' component={Contact} />
                   <Route path='/project' component={Project} />
                   <Route exact path='/' component={Home} />
+                  <Route path='*' component={NotFound} />
                 </Switch>
               )}
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import Logo from './Header/Logo'
@@ -10,10 +10,18 @@ const Header = ({ mode, modeFunc, state }) => {
     toggleMenu: [toggleMenu, setToggleMenu],
   } = { toggleMenu: useState(false), ...(state || {}) }
 
+  useEffect(() => {
+    document.addEventListener('keydown', (e) => {
+      e.key === 'm' && setToggleMenu(!toggleMenu)
+    })
+  }, [toggleMenu, setToggleMenu]) // eslint-disable-line
+
   return (
     <>
       <Container>
-        <Logo />
+        <span onClick={() => setToggleMenu(false)}>
+          <Logo />
+        </span>
         <div className='icons'>
           <Link onClick={() => setToggleMenu(!toggleMenu)}>
             <MenuBtn />
@@ -42,12 +50,15 @@ const Container = styled.div`
   }
 `
 
-const Link = styled.span`
+const Link = styled.button`
   padding: 10px;
   display: flex;
+  border: none;
+  outline: none;
   flex-direction: row;
   align-items: center;
   border-radius: 12px;
+  background-color: transparent;
   justify-content: center;
   color: ${({ theme }) => theme.text};
 

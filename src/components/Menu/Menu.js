@@ -1,8 +1,8 @@
 import React from 'react'
-import MenuItem from './Menu/MenuItem'
+import MenuItem from './MenuItem'
 import { BiHomeAlt, BiFile, BiMailSend, BiEdit } from 'react-icons/bi'
 
-const ListMenu = () => {
+const Menu = () => {
   return (
     <>
       {paths.map((item, i) => {
@@ -20,7 +20,7 @@ const ListMenu = () => {
   )
 }
 
-export default ListMenu
+export default Menu
 
 export const paths = [
   { location: '/', name: 'home', icon: <BiHomeAlt />, command: 'a' },
