@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <Section>
       <Title>Contact</Title>
-      <Parag>you can contact me here</Parag>
+      <Parag>Get in touch</Parag>
     </Section>
   )
 }

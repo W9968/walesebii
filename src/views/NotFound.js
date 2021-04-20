@@ -8,19 +8,11 @@ const NotFound = () => {
         <Title>This Page cannot be found</Title>
         <blockquote cite='http://www.aaronsw.com/weblog/visitingmit'>
           <Parag>
-            it doesn't exist, it never has, I'm nostalgic for a place that never
-            existed
+            it doesn't exist, it never has, yet not all those who wander are
+            lost.
           </Parag>
 
-          <cite>
-            "Aaron Swartz,{' '}
-            <a
-              className='link'
-              href='http://www.aaronsw.com/weblog/visitingmit'>
-              I love the university
-            </a>
-            "
-          </cite>
+          <cite>"J.R.R. Tolkein, The Fellowship of the Ring "</cite>
         </blockquote>
       </Section>
     </>

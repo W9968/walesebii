@@ -12,7 +12,7 @@ const SocialIcons = () => {
     <>
       <Social>
         <a
-          href='https://twitter.com/SebiiyWalee'
+          href='https://twitter.com/Jagarkin'
           target={'_blank'}
           rel='noreferrer'>
           <Twitter />

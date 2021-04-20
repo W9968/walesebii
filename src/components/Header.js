@@ -48,6 +48,7 @@ const Link = styled.button`
   display: flex;
   border: none;
   outline: none;
+  margin: 0px 10px;
   flex-direction: row;
   align-items: center;
   border-radius: 12px;

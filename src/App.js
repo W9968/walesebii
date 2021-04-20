@@ -1,11 +1,10 @@
 import React from 'react'
+import { useMenu } from './hooks/useMenu'
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from './Theme'
 import { useDarkMode } from './hooks/useDarkMode'
 import { GlobalStyle, Wrapper, Main } from './hooks/useGlobalTheming'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
-import { useMenu } from './hooks/useMenu'
 
 import Home from './views/Home'
 import Project from './views/Project'
@@ -18,6 +17,8 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import Cursor from './hooks/useCursor'
 import NotFound from './views/NotFound'
+
+import { motion as m } from 'framer-motion'
 
 function App() {
   const { isMenuOpen } = useMenu()
@@ -35,7 +36,13 @@ function App() {
             <Main>
               <Header mode={theme} modeFunc={toggleTheme} />
               {isMenuOpen ? (
-                <Menu />
+                <m.div
+                  key='modal'
+                  initial={{ opacity: 0, y: '-30%' }}
+                  animate={{ opacity: 1, y: '0%' }}
+                  transition={{ duration: 0.5, type: 'spring' }}>
+                  <Menu />
+                </m.div>
               ) : (
                 <Switch>
                   <Route path='/writing' component={Writings} />

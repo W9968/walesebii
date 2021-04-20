@@ -1,0 +1,46 @@
+13:12:47.349  	Cloning github.com/jagarkin/jagarkin-portfolio (Branch: main, Commit: efc2c05)
+13:12:47.937  	Cloning completed in 588ms
+13:12:47.942  	Analyzing source code...
+13:12:48.467  	Installing build runtime...
+13:12:52.046  	Build runtime installed: 3578.895ms
+13:12:54.662  	Looking up build cache...
+13:12:55.127  	Build cache found. Downloading...
+13:12:58.759  	Build cache downloaded [42.98 MB]: 3630.602ms
+13:12:59.642  	Detected package.json
+13:12:59.643  	Installing dependencies...
+13:13:11.654  	npm WARN @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@7.13.12 requires a peer of @babel/core@^7.13.0 but none is installed. You must install peer dependencies yourself.
+13:13:11.672  	npm WARN react-animated-cursor@2.1.8 requires a peer of react@^16.13.1 but none is installed. You must install peer dependencies yourself.
+13:13:11.690  	npm WARN react-animated-cursor@2.1.8 requires a peer of react-dom@^16.13.1 but none is installed. You must install peer dependencies yourself.
+13:13:11.715  	npm WARN tsutils@3.21.0 requires a peer of typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta but none is installed. You must install peer dependencies yourself.
+13:13:11.749  	npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+13:13:11.749  	npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+13:13:11.765  	npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
+13:13:11.765  	npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+13:13:11.776  	npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/webpack-dev-server/node_modules/fsevents):
+13:13:11.776  	npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+13:13:11.778  	up to date in 11.425s
+13:13:12.963  	137 packages are looking for funding
+13:13:12.963  	  run `npm fund` for details
+13:13:13.229  	Running "npm run build"
+13:13:13.536  	> jagar@0.1.0 build /vercel/workpath0
+13:13:13.536  	> react-scripts build
+13:13:15.152  	Creating an optimized production build...
+13:13:29.972  	Compiled successfully.
+13:13:29.973  	File sizes after gzip:
+13:13:30.008  	  97.62 KB  build/static/js/2.e12691fd.chunk.js
+13:13:30.008  	  5.13 KB   build/static/js/main.3d37f14a.chunk.js
+13:13:30.008  	  770 B     build/static/js/runtime-main.5cbe5368.js
+13:13:30.009  	The project was built assuming it is hosted at /.
+13:13:30.009  	You can control this with the homepage field in your package.json.
+13:13:30.009  	The build folder is ready to be deployed.
+13:13:30.010  	You may serve it with a static server:
+13:13:30.010  	  npm install -g serve
+13:13:30.010  	  serve -s build
+13:13:30.010  	Find out more about deployment here:
+13:13:30.011  	  https://cra.link/deployment
+13:13:30.871  	Uploading build outputs...
+13:13:31.042  	Deploying build outputs...
+13:13:36.353  	Build completed. Populating build cache...
+13:14:04.874  	Uploading build cache [44.31 MB]...
+13:14:07.423  	Build cache uploaded: 2548.293ms
+13:14:07.660  	Done with "package.json"
