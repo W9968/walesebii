@@ -5,6 +5,7 @@ import * as Sentry from '@sentry/react'
 import { Integrations } from '@sentry/tracing'
 
 import App from './App'
+import MenuProvider from './hooks/useMenu'
 
 Sentry.init({
   dsn:
@@ -15,7 +16,9 @@ Sentry.init({
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MenuProvider>
+      <App />
+    </MenuProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )

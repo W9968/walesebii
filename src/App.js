@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from './Theme'
 import { useDarkMode } from './hooks/useDarkMode'
 import { GlobalStyle, Wrapper, Main } from './hooks/useGlobalTheming'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+import { useMenu } from './hooks/useMenu'
 
 import Home from './views/Home'
 import Project from './views/Project'
@@ -18,7 +20,7 @@ import Cursor from './hooks/useCursor'
 import NotFound from './views/NotFound'
 
 function App() {
-  const [toggleMenu, setToggleMenu] = useState()
+  const { isMenuOpen } = useMenu()
   const [theme, toggleTheme, componentMounted] = useDarkMode()
 
   if (!componentMounted) {
@@ -31,13 +33,9 @@ function App() {
         <Wrapper>
           <Router>
             <Main>
-              <Header
-                mode={theme}
-                modeFunc={toggleTheme}
-                state={{ toggleMenu: [toggleMenu, setToggleMenu] }}
-              />
-              {toggleMenu ? (
-                <Menu state={{ toggleMenu: [toggleMenu, setToggleMenu] }} />
+              <Header mode={theme} modeFunc={toggleTheme} />
+              {isMenuOpen ? (
+                <Menu />
               ) : (
                 <Switch>
                   <Route path='/writing' component={Writings} />
@@ -48,8 +46,7 @@ function App() {
                   <Route path='*' component={NotFound} />
                 </Switch>
               )}
-
-              <Footer />
+              <Footer />{' '}
             </Main>
           </Router>
         </Wrapper>

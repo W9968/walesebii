@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
+import { useMenu } from '../../hooks/useMenu'
 
 const MenuItem = ({ link, svg, path, command }) => {
+  const { closeMenu } = useMenu()
+
   return (
     <>
-      <Wrapper to={link}>
+      <Wrapper to={link} onClick={closeMenu}>
         <Name>
           <span className='icon'>{svg}</span>
           <Parag className='title'>{path}</Parag>

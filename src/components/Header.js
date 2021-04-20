@@ -1,23 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+import { useMenu } from '../hooks/useMenu'
 
 import Logo from './Header/Logo'
 import MenuBtn from './Header/MenuBtn'
 import Toggle from './Header/Toggle'
 
-const Header = ({ mode, modeFunc, state }) => {
-  const {
-    toggleMenu: [toggleMenu, setToggleMenu],
-  } = { toggleMenu: useState(false), ...(state || {}) }
+const Header = ({ mode, modeFunc }) => {
+  const { toggleMenu, closeMenu } = useMenu()
 
   return (
     <>
       <Container>
-        <span onClick={() => setToggleMenu(false)}>
+        <span onClick={closeMenu}>
           <Logo />
         </span>
         <div className='icons'>
-          <Link onClick={() => setToggleMenu(!toggleMenu)}>
+          <Link onClick={toggleMenu}>
             <MenuBtn />
           </Link>
 

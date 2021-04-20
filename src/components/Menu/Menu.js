@@ -8,7 +8,7 @@ const Menu = () => {
       {paths.map((item, i) => {
         return (
           <MenuItem
-            key={i}
+            ke={i}
             link={item.location}
             svg={item.icon}
             path={item.name}

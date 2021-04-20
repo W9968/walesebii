@@ -6,29 +6,29 @@ export const useToggle = (initialState) => {
   return { isToggled, setToggle, toggle }
 }
 
-const initialState = {
+const initState = {
   isMenuOpen: false,
   toggle: () => {},
 }
 
-const MenuContext = React.createContext(initialState)
+export const MenuContext = React.createContext(initState)
 
-export function useMenu() {
-  return useContext(MenuContext)
-}
-
-export default function MenuProvider({ children }) {
+const MenuProvider = ({ children }) => {
   const { isToggled, setToggle, toggle } = useToggle(false)
   const closeMenu = () => setToggle(false)
-
   return (
     <MenuContext.Provider
       value={{
         isMenuOpen: isToggled,
-        toggle: toggle,
+        toggleMenu: toggle,
         closeMenu,
       }}>
       {children}
     </MenuContext.Provider>
   )
+}
+export default MenuProvider
+
+export const useMenu = () => {
+  return useContext(MenuContext)
 }
