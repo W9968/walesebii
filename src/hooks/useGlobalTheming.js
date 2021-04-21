@@ -55,11 +55,14 @@ export const Wrapper = styled.div`
 `
 
 export const Main = styled.main`
+  display: flex;
   width: 720px;
   min-height: 100vh;
   margin: 0px auto;
   padding: 96px 16px;
   background-color: none;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media (max-width: 720px) {
     width: 100%;

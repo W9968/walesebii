@@ -18,7 +18,7 @@ import Header from './components/Header'
 import Cursor from './hooks/useCursor'
 import NotFound from './views/NotFound'
 
-import { motion as m } from 'framer-motion'
+import { motion as m, AnimatePresence } from 'framer-motion'
 
 function App() {
   const { isMenuOpen } = useMenu()
@@ -34,26 +34,36 @@ function App() {
         <Wrapper>
           <Router>
             <Main>
-              <Header mode={theme} modeFunc={toggleTheme} />
-              {isMenuOpen ? (
-                <m.div
-                  key='modal'
-                  initial={{ opacity: 0, y: '-30%' }}
-                  animate={{ opacity: 1, y: '0%' }}
-                  transition={{ duration: 0.5, type: 'spring' }}>
-                  <Menu />
-                </m.div>
-              ) : (
-                <Switch>
-                  <Route path='/writing' component={Writings} />
-                  <Route path='/meta' component={Meta} />
-                  <Route path='/contact' component={Contact} />
-                  <Route path='/project' component={Project} />
-                  <Route exact path='/' component={Home} />
-                  <Route path='*' component={NotFound} />
-                </Switch>
-              )}
-              <Footer />{' '}
+              <span>
+                <Header mode={theme} modeFunc={toggleTheme} />
+                <AnimatePresence>
+                  {isMenuOpen ? (
+                    <m.div
+                      key='modal'
+                      initial={{ opacity: 0, y: '-10%' }}
+                      animate={isMenuOpen && { opacity: 1, y: '0%' }}
+                      transition={{ duration: 0.7, type: 'spring' }}>
+                      <Menu />
+                    </m.div>
+                  ) : (
+                    <m.div
+                      key='poper'
+                      initial={{ opacity: 0, y: '-10%' }}
+                      animate={!isMenuOpen && { opacity: 1, y: '0%' }}
+                      transition={{ duration: 0.7, type: 'spring' }}>
+                      <Switch>
+                        <Route path='/writing' component={Writings} />
+                        <Route path='/meta' component={Meta} />
+                        <Route path='/contact' component={Contact} />
+                        <Route path='/project' component={Project} />
+                        <Route exact path='/' component={Home} />
+                        <Route path='*' component={NotFound} />
+                      </Switch>
+                    </m.div>
+                  )}
+                </AnimatePresence>
+              </span>
+              <Footer />
             </Main>
           </Router>
         </Wrapper>
