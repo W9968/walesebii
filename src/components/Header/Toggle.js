@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { func, string } from 'prop-types'
 import { BiSun, BiMoon } from 'react-icons/bi'
@@ -7,20 +7,26 @@ import { motion, AnimatePresence } from 'framer-motion'
 const Toggle = ({ theme, toggleTheme }) => {
   const [rotation, setRotation] = useState(0)
 
+  useEffect(() => {
+    setRotation(0)
+  }, [])
+
   return (
     <>
       <AnimatePresence>
         {theme === 'dark' ? (
           <motion.div
+            //initial={{ rotate: 0 }}
             animate={{ rotate: rotation }}
-            onClick={() => setRotation(rotation + 180)}
+            onClick={() => setRotation(rotation + 360)}
             transition={{ type: 'spring' }}>
             <Moon onClick={toggleTheme} />
           </motion.div>
         ) : (
           <motion.div
+            //initial={{ rotate: 0 }}
             animate={{ rotate: rotation }}
-            onClick={() => setRotation(rotation + 180)}
+            onClick={() => setRotation(rotation - 360)}
             transition={{ type: 'spring' }}>
             <Sun onClick={toggleTheme} />
           </motion.div>

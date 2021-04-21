@@ -3,10 +3,12 @@ import styled from 'styled-components'
 
 const Writings = () => {
   return (
-    <Section>
-      <Title>Blog</Title>
-      <Parag>A collection of what I know about coding and design</Parag>
-    </Section>
+    <>
+      <Section>
+        <Title>writing</Title>
+        <Parag>A collection of what I know about coding and design</Parag>
+      </Section>
+    </>
   )
 }
 

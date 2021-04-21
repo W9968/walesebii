@@ -1,28 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
+import { BiPhone, BiEnvelope } from 'react-icons/bi'
+
+import Information from '../components/shared/Information'
+
 const Contact = () => {
+  const cords = [
+    { icon: <BiPhone />, text: '+216 58 06 18 35' },
+    { icon: <BiEnvelope />, text: 'waleesebiiy@gmail.com' },
+  ]
+
   return (
-    <Section>
-      <Title>Contact</Title>
-      <Parag>Get in touch</Parag>
-    </Section>
+    <>
+      <Section>
+        <Title>Contact</Title>
+        <Parag>Get in touch.</Parag>
+
+        <cite>
+          {cords.map((cord, i) => {
+            return <Information key={i} svg={cord.icon} info={cord.text} />
+          })}
+        </cite>
+      </Section>
+    </>
   )
 }
 
 export default Contact
 
-const Section = styled.section`
-  ul {
-    margin: 0px 20px;
-  }
-
-  .divider {
-    height: 3px;
-    width: 100px;
-    margin: 48px auto;
-    background: linear-gradient(-90deg, #ddd6f3, #faaca8);
-  }
-`
+const Section = styled.section``
 
 const Title = styled.h1`
   font-size: 2.5rem;
