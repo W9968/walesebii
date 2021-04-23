@@ -1,4 +1,5 @@
 import React from 'react'
+import useSound from 'use-sound'
 import styled from 'styled-components'
 import { useMenu } from '../hooks/useMenu'
 
@@ -6,8 +7,13 @@ import Logo from './Header/Logo'
 import MenuBtn from './Header/MenuBtn'
 import Toggle from './Header/Toggle'
 
+import Clickon from './sfx/clickon.mp3'
+import Clickoff from './sfx/clickoff.mp3'
+
 const Header = ({ mode, modeFunc }) => {
-  const { toggleMenu, closeMenu } = useMenu()
+  const [play1] = useSound(Clickon)
+  const [play2] = useSound(Clickoff)
+  const { toggleMenu, closeMenu, isMenuOpen } = useMenu()
 
   return (
     <>
@@ -16,7 +22,9 @@ const Header = ({ mode, modeFunc }) => {
           <Logo />
         </span>
         <div className='icons'>
-          <Link onClick={toggleMenu}>
+          <Link
+            onClick={toggleMenu}
+            onMouseDownCapture={isMenuOpen ? play1 : play2}>
             <MenuBtn />
           </Link>
 

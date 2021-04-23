@@ -26,5 +26,5 @@ export const paths = [
   { location: '/', name: 'home', icon: <BiHomeAlt />, command: 'a' },
   { location: '/project', name: 'project', icon: <BiFile />, command: 'p' },
   { location: '/contact', name: 'contact', icon: <BiMailSend />, command: 'c' },
-  { location: '/writing', name: 'writing', icon: <BiEdit />, command: 'w' },
+  { location: '/writing', name: 'writing', icon: <BiEdit />, command: 'b' },
 ]
