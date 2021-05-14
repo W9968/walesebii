@@ -3,13 +3,15 @@ import styled from 'styled-components'
 import { paths } from '../Menu/Menu'
 import { BiCommand } from 'react-icons/bi'
 import { useHistory } from 'react-router-dom'
+import { useMenu } from '../../hooks/useMenu'
 
 const MenuBtn = () => {
   const history = useHistory()
-
+  const { closeMenu } = useMenu()
   useEffect(() => {
     document.addEventListener('keydown', (e) => {
       paths.map((path) => {
+        closeMenu()
         return e.key === path.command && history.push(path.location)
       })
     })

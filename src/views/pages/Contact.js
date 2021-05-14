@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { BiPhone, BiEnvelope } from 'react-icons/bi'
 
-import Information from '../components/shared/Information'
+import Information from '../../components/shared/Information'
 
 const Contact = () => {
   const cords = [

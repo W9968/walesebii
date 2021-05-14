@@ -14,27 +14,26 @@ const Meta = () => {
           I don't expect anyone else to care that much, but I figured I would
           write down some of the nooks and crannies of this place:
         </Parag>
-        <Parag>
-          <ul>
-            <li>Dark (by default) and light mode.</li>
-            <li>
-              Sound design! Not much, a few whooshes and bleeps here and there.
-            </li>
-            <li>Fascinating hover interactions </li>
-            <li>Custom cursor to make your experience even better</li>
-          </ul>
-        </Parag>
+
+        <List>
+          <li>Dark (by default) and light mode.</li>
+          <li>
+            Sound design! Not much, a few whooshes and bleeps here and there.
+          </li>
+          <li>Fascinating hover interactions </li>
+          <li>Custom cursor to make your experience even better</li>
+        </List>
+
         <div className='divider' />
         <Parag>This site would not exist, as it does today, without:</Parag>
-        <Parag>
-          <ul>
-            <li>React-Js</li>
-            <li>Prop-Types</li>
-            <li>Styled-Components</li>
-            <li>Sentry</li>
-            <li>Vercel Web Servers</li>
-          </ul>
-        </Parag>
+
+        <List>
+          <li>React-Js</li>
+          <li>Prop-Types</li>
+          <li>Styled-Components</li>
+          <li>Sentry</li>
+          <li>Vercel Web Servers</li>
+        </List>
       </Section>
     </>
   )
@@ -53,6 +52,12 @@ const Section = styled.section`
     margin: 48px auto;
     background: linear-gradient(-90deg, #ddd6f3, #faaca8);
   }
+
+  .gravatar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `
 
 const Title = styled.h1`
@@ -65,6 +70,13 @@ const Title = styled.h1`
   background: -webkit-linear-gradient(right, #ddd6f3 80%, #faaca8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+`
+
+const List = styled.ul`
+  line-height: 36px;
+  margin: 16px 0px;
+  font-size: 1.225rem;
+  letter-spacing: 0.25px;
 `
 
 const Parag = styled.p`

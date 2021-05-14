@@ -79,7 +79,7 @@ const Command = styled.p`
   padding: 5px 10px;
   align-items: center;
   border-radius: 12px;
-  font-size: 1.225rem;
+  font-size: 1.125rem;
   filter: contrast(0.75);
   justify-content: center;
   text-transform: capitalize;

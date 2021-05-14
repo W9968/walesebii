@@ -1,24 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Project = () => {
+const Shop = () => {
   return (
     <>
       <Section>
-        <Title>Project</Title>
-        <Parag>List of different projects written mostly in JavaScript</Parag>
+        <Title>shop</Title>
+        <Parag>
+          wanted to take this a step further and turn it into a brand
+        </Parag>
       </Section>
     </>
   )
 }
 
-export default Project
+export default Shop
 
 const Section = styled.section`
-  ul {
-    margin: 0px 20px;
-  }
-
   .divider {
     height: 3px;
     width: 100px;
@@ -34,7 +32,7 @@ const Title = styled.h1`
   text-transform: capitalize;
 
   /* gradient */
-  background: -webkit-linear-gradient(right, #ee0979 80%, #ff6a00);
+  background: -webkit-linear-gradient(right, #5d26c1 80%, #59c173);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
