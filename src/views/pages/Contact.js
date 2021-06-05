@@ -7,7 +7,7 @@ import Information from '../../components/shared/Information'
 const Contact = () => {
   const cords = [
     { icon: <BiPhone />, text: '+216 58 06 18 35' },
-    { icon: <BiEnvelope />, text: 'waleesebiiy@gmail.com' },
+    { icon: <BiEnvelope />, text: 'noreply@walee.tech' },
   ]
 
   return (
