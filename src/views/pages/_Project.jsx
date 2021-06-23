@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import CardProject from '../../components/project_card/CardProject'
+import CardProject from '../../components/project_card/CardProject.jsx'
 
-const Project = () => {
+const _Project = () => {
   return (
     <>
       <Section>
@@ -14,7 +14,7 @@ const Project = () => {
   )
 }
 
-export default Project
+export default _Project
 
 const Section = styled.section`
   ul {

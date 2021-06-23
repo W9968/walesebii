@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import { paths } from '../Menu/Menu'
+import { paths } from '../Menu/Menu.jsx'
 import { BiCommand } from 'react-icons/bi'
 import { useHistory } from 'react-router-dom'
-import { useMenu } from '../../hooks/useMenu'
+import { useMenu } from '../../hooks/useMenu.jsx'
 
 const MenuBtn = () => {
   const history = useHistory()

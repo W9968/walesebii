@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Home = () => {
+const _Home = () => {
   return (
     <>
       <Section>
@@ -17,7 +17,7 @@ const Home = () => {
   )
 }
 
-export default Home
+export default _Home
 
 const Section = styled.section`
   .lining {

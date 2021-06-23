@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Writings = () => {
+const _Writings = () => {
   return (
     <>
       <Section>
@@ -12,7 +12,7 @@ const Writings = () => {
   )
 }
 
-export default Writings
+export default _Writings
 
 const Section = styled.section`
   .divider {

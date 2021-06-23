@@ -1,16 +1,16 @@
 import React from 'react'
 import useSound from 'use-sound'
 import styled from 'styled-components'
-import { useMenu } from '../hooks/useMenu'
+import { useMenu } from '../../hooks/useMenu.jsx'
 
-import Logo from './Header/Logo'
-import MenuBtn from './Header/MenuBtn'
-import Toggle from './Header/Toggle'
+import Logo from '../../components/Header/Logo.jsx'
+import MenuBtn from '../../components/Header/MenuBtn.jsx'
+import Toggle from '../../components/Header/Toggle.jsx'
 
-import Clickon from './sfx/clickon.mp3'
-import Clickoff from './sfx/clickoff.mp3'
+import Clickon from '../../components/sfx/clickon.mp3'
+import Clickoff from '../../components/sfx/clickoff.mp3'
 
-const Header = ({ mode, modeFunc }) => {
+const _Header = ({ mode, modeFunc }) => {
   const [play1] = useSound(Clickon)
   const [play2] = useSound(Clickoff)
   const { toggleMenu, closeMenu, isMenuOpen } = useMenu()
@@ -35,7 +35,7 @@ const Header = ({ mode, modeFunc }) => {
   )
 }
 
-export default Header
+export default _Header
 
 const Container = styled.div`
   display: flex;

@@ -1,24 +1,25 @@
 import React from 'react'
-import { useMenu } from './hooks/useMenu'
+import { useMenu } from './hooks/useMenu.jsx'
 import { ThemeProvider } from 'styled-components'
-import { lightTheme, darkTheme } from './Theme'
-import { useDarkMode } from './hooks/useDarkMode'
-import { GlobalStyle, Wrapper, Main } from './hooks/useGlobalTheming'
+import { useDarkMode } from './hooks/useDarkMode.jsx'
+import { lightTheme, darkTheme } from './Theme.jsx'
+import { GlobalStyle, Wrapper, Main } from './hooks/useGlobalTheming.jsx'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Header, Footer } from './layout/exports.jsx'
 
-import Home from './views/pages/Home'
-import Project from './views/pages/Project'
-import Contact from './views/pages/Contact'
-import Meta from './views/pages/Meta'
-import Writings from './views/pages/Writings'
-import NotFound from './views/pages/NotFound'
-import Shop from './views/pages/Shop'
-import RequestAccess from './views/admin/RequestAccess'
+import {
+  HomePage,
+  ProjectPage,
+  ContactPage,
+  MetaPage,
+  WritingPage,
+  NotFoundPage,
+  ShopPage,
+  RequestAccess,
+} from './views/exports.jsx'
 
-import Menu from './components/Menu/Menu'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Cursor from './hooks/useCursor'
+import Menu from './components/Menu/Menu.jsx'
+import Cursor from './hooks/useCursor.jsx'
 
 import { motion as m } from 'framer-motion'
 
@@ -54,13 +55,13 @@ function App() {
                     transition={{ duration: 0.7, type: 'spring' }}>
                     <Switch>
                       <Route path='/req' component={RequestAccess} />
-                      <Route path='/shop' component={Shop} />
-                      <Route path='/writing' component={Writings} />
-                      <Route path='/meta' component={Meta} />
-                      <Route path='/contact' component={Contact} />
-                      <Route path='/project' component={Project} />
-                      <Route exact path='/' component={Home} />
-                      <Route path='*' component={NotFound} />
+                      <Route path='/shop' component={ShopPage} />
+                      <Route path='/writing' component={WritingPage} />
+                      <Route path='/meta' component={MetaPage} />
+                      <Route path='/contact' component={ContactPage} />
+                      <Route path='/project' component={ProjectPage} />
+                      <Route exact path='/' component={HomePage} />
+                      <Route path='*' component={NotFoundPage} />
                     </Switch>
                   </m.div>
                 )}

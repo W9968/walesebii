@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Shop = () => {
+const _Shop = () => {
   return (
     <>
       <Section>
@@ -14,7 +14,7 @@ const Shop = () => {
   )
 }
 
-export default Shop
+export default _Shop
 
 const Section = styled.section`
   .divider {

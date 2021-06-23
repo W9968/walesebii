@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { BiPhone, BiEnvelope } from 'react-icons/bi'
 
-import Information from '../../components/shared/Information'
+import Information from '../../components/shared/Information.jsx'
 
-const Contact = () => {
+const _Contact = () => {
   const cords = [
     { icon: <BiPhone />, text: '+216 58 06 18 35' },
     { icon: <BiEnvelope />, text: 'noreply@walee.tech' },
@@ -26,7 +26,7 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default _Contact
 
 const Section = styled.section``
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const NotFound = () => {
+const _NotFound = () => {
   return (
     <>
       <Section>
@@ -19,7 +19,7 @@ const NotFound = () => {
   )
 }
 
-export default NotFound
+export default _NotFound
 
 const Section = styled.section`
   .link {

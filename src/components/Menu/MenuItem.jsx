@@ -2,7 +2,7 @@ import React from 'react'
 import useSound from 'use-sound'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import { useMenu } from '../../hooks/useMenu'
+import { useMenu } from '../../hooks/useMenu.jsx'
 
 import Hover from '../sfx/hover.mp3'
 

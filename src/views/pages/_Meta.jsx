@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Meta = () => {
+const _Meta = () => {
   return (
     <>
       <Section>
@@ -39,7 +39,7 @@ const Meta = () => {
   )
 }
 
-export default Meta
+export default _Meta
 
 const Section = styled.section`
   ul {

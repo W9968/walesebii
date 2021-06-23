@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import SocialIcons from './Footer/SocialIcons'
-import Year from './Footer/Year'
 
-const Footer = () => {
+import SocialIcons from '../../components/Footer/SocialIcons.jsx'
+import Year from '../../components/Footer/Year.jsx'
+
+const _Footer = () => {
   return (
     <>
       <Footing>
@@ -14,7 +15,7 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default _Footer
 
 const Footing = styled.footer`
   display: flex;
