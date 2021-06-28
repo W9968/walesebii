@@ -27,6 +27,8 @@ function App() {
   const { isMenuOpen } = useMenu()
   const [theme, toggleTheme, componentMounted] = useDarkMode()
 
+  console.log(process.env.REACT_APP_SECRET_CODE)
+
   if (!componentMounted) {
     return <div />
   } else {
@@ -54,7 +56,7 @@ function App() {
                     animate={!isMenuOpen && { opacity: 1, y: '0%' }}
                     transition={{ duration: 0.7, type: 'spring' }}>
                     <Switch>
-                      <Route path='/req' component={RequestAccess} />
+                      <Route path='/authenticate' component={RequestAccess} />
                       <Route path='/shop' component={ShopPage} />
                       <Route path='/writing' component={WritingPage} />
                       <Route path='/meta' component={MetaPage} />
