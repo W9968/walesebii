@@ -3,6 +3,7 @@ export const lightTheme = {
   body: '#ffffff',
   hover: '#efefef',
   select: '#1bffcd',
+  lightText: '#666666',
 }
 
 export const darkTheme = {
@@ -10,4 +11,5 @@ export const darkTheme = {
   body: '#111111',
   hover: '#222222',
   select: '#1bffcd',
+  lightText: '#666666',
 }

@@ -15,7 +15,6 @@ import {
   WritingPage,
   NotFoundPage,
   ShopPage,
-  RequestAccess,
 } from './views/exports.jsx'
 
 import Menu from './components/Menu/Menu.jsx'
@@ -26,8 +25,6 @@ import { motion as m } from 'framer-motion'
 function App() {
   const { isMenuOpen } = useMenu()
   const [theme, toggleTheme, componentMounted] = useDarkMode()
-
-  console.log(process.env.REACT_APP_SECRET_CODE)
 
   if (!componentMounted) {
     return <div />
@@ -56,7 +53,6 @@ function App() {
                     animate={!isMenuOpen && { opacity: 1, y: '0%' }}
                     transition={{ duration: 0.7, type: 'spring' }}>
                     <Switch>
-                      <Route path='/authenticate' component={RequestAccess} />
                       <Route path='/shop' component={ShopPage} />
                       <Route path='/writing' component={WritingPage} />
                       <Route path='/meta' component={MetaPage} />

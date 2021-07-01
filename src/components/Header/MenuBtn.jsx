@@ -8,6 +8,7 @@ import { useMenu } from '../../hooks/useMenu.jsx'
 const MenuBtn = () => {
   const history = useHistory()
   const { closeMenu } = useMenu()
+
   useEffect(() => {
     document.addEventListener('keydown', (e) => {
       paths.map((path) => {
