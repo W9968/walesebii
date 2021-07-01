@@ -5,3 +5,5 @@ export { default as MetaPage } from './pages/_Meta.jsx'
 export { default as WritingPage } from './pages/_Writings.jsx'
 export { default as NotFoundPage } from './pages/_NotFound.jsx'
 export { default as ShopPage } from './pages/_Shop.jsx'
+
+export { default as Auth } from './admin/_Auth'

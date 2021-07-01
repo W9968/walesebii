@@ -10,11 +10,16 @@ const MenuBtn = () => {
   const { closeMenu } = useMenu()
 
   useEffect(() => {
-    document.addEventListener('keydown', (e) => {
-      paths.map((path) => {
-        closeMenu()
-        return e.key === path.command && history.push(path.location)
-      })
+    document.addEventListener('keyup', (e) => {
+      e.altKey &&
+        document.addEventListener('keydown', (e) => {
+          paths.map((path) => {
+            closeMenu()
+            return (
+              e.altKey && e.key === path.command && history.push(path.location)
+            )
+          })
+        })
     })
   }, []) // eslint-disable-line
 

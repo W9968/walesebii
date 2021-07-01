@@ -15,6 +15,7 @@ import {
   WritingPage,
   NotFoundPage,
   ShopPage,
+  Auth,
 } from './views/exports.jsx'
 
 import Menu from './components/Menu/Menu.jsx'
@@ -53,6 +54,7 @@ function App() {
                     animate={!isMenuOpen && { opacity: 1, y: '0%' }}
                     transition={{ duration: 0.7, type: 'spring' }}>
                     <Switch>
+                      <Route path='/authenticate' component={Auth} />
                       <Route path='/shop' component={ShopPage} />
                       <Route path='/writing' component={WritingPage} />
                       <Route path='/meta' component={MetaPage} />
