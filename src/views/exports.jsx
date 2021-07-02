@@ -7,3 +7,4 @@ export { default as NotFoundPage } from './pages/_NotFound.jsx'
 export { default as ShopPage } from './pages/_Shop.jsx'
 
 export { default as Auth } from './admin/_Auth'
+export { default as Panel } from './admin/_Panel'
