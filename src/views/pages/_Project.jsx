@@ -36,6 +36,7 @@ const Title = styled.h1`
   text-transform: capitalize;
 
   /* gradient */
+  background-clip: text;
   background: -webkit-linear-gradient(right, #ee0979 80%, #ff6a00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
