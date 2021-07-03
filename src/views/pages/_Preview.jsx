@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import butter from '../../hooks/butter-client'
 import { useParams } from 'react-router'
 import { Pulse } from '../exports'
+import moment from 'moment'
 
 const _Preview = () => {
   const { slug } = useParams()
@@ -21,6 +22,7 @@ const _Preview = () => {
           </div>
         ) : (
           <>
+            <Timer>{moment(post.data.created).format('ll')}</Timer>
             <Title>{post.data.title}</Title>
             <Body dangerouslySetInnerHTML={{ __html: post.data.body }} />
           </>
@@ -36,6 +38,11 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+`
+
+const Timer = styled.p`
+  font-size: 1.125rem;
+  margin-bottom: 1.125rem;
 `
 
 const Title = styled.h1`
