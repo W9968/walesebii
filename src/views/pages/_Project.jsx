@@ -20,6 +20,7 @@ const _Project = () => {
               title={el.title}
               summery={el.summery}
               link={el.image}
+              externalLink={el.url}
             />
           )
         })}

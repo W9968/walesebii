@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const CardProject = ({ title, summery, link }) => {
+const CardProject = ({ title, summery, link, externalLink }) => {
   return (
     <>
-      <Container>
+      <Container href={externalLink} target={'_blank'}>
         <Image src={link} alt={title} />
         <Overly>
           <Title>{title}</Title>
@@ -17,7 +17,7 @@ const CardProject = ({ title, summery, link }) => {
 
 export default CardProject
 
-const Container = styled.div`
+const Container = styled.a`
   width: 100%;
   display: flex;
   height: 300px;
