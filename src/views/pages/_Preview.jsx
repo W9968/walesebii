@@ -12,8 +12,6 @@ const _Preview = () => {
     butter.post.retrieve(slug).then((res) => setPost(res.data))
   }, [slug])
 
-  console.log(post)
-
   return (
     <>
       <Wrapper>
@@ -44,7 +42,7 @@ const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: 900;
   letter-spacing: 1px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-transform: capitalize;
 `
 
@@ -57,15 +55,17 @@ const Body = styled.div`
   }
 
   pre {
-    width: 100%;
     padding: 1rem;
     margin: 1rem 0;
+    max-width: 100%;
+    overflow-y: auto;
     line-height: 1.3rem;
     border-radius: 0.5rem;
     background-color: ${({ theme }) => theme.hover};
   }
 
   p {
+    margin: 1rem 0;
     line-height: 2rem;
     font-size: 1.25rem;
   }

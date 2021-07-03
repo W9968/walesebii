@@ -73,10 +73,12 @@ const Parag = styled.p`
 `
 
 const Command = styled.p`
+  width: 32px;
+  height: 32px;
   margin: 0px;
   display: flex;
   opacity: 0.7;
-  padding: 5px 10px;
+  padding: 5px;
   align-items: center;
   border-radius: 12px;
   font-size: 1.125rem;
