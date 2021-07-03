@@ -13,9 +13,7 @@ const _Writings = () => {
     butter.post.list({ page: 1, page_size: 10 }).then(function (response) {
       setPosts(response.data)
     })
-  }, [])
-
-  console.log(posts)
+  })
 
   return (
     <>

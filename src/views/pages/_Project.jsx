@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { projects } from '../../components/project_card/projects.jsx'
 import CardProject from '../../components/project_card/CardProject.jsx'
 
 const _Project = () => {
@@ -7,8 +8,21 @@ const _Project = () => {
     <>
       <Section>
         <Title>Project</Title>
-        <Parag>List of different projects written mostly in JavaScript</Parag>
-        <CardProject />
+        <Parag>
+          List of different projects written mostly in JavaScript, also to show
+          my progress
+        </Parag>
+        <div className='divider' />
+        {projects.map((el, key) => {
+          return (
+            <CardProject
+              key={key}
+              title={el.title}
+              summery={el.summery}
+              link={el.image}
+            />
+          )
+        })}
       </Section>
     </>
   )

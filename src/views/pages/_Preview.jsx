@@ -11,7 +11,7 @@ const _Preview = () => {
 
   useEffect(() => {
     butter.post.retrieve(slug).then((res) => setPost(res.data))
-  }, [slug])
+  })
 
   return (
     <>
