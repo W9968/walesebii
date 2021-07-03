@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
 
-const BlogITem = ({ title, time, intro }) => {
+const BlogITem = ({ slug, title, time, intro }) => {
+  const history = useHistory()
+
   return (
     <>
-      <Card>
+      <Card onClick={() => history.push(`/posts/${slug}`)}>
         <Col>
           <Timing>{time}</Timing>
         </Col>
@@ -25,7 +28,7 @@ const Card = styled.div`
   flex-direction: row;
   padding-bottom: 1rem;
   align-items: flex-start;
-  transition: 100ms ease-in-out;
+
   border-bottom: 2px solid ${({ theme }) => theme.hover};
 
   &:first-child {
@@ -33,6 +36,7 @@ const Card = styled.div`
   }
 
   &:hover {
+    transition: 100ms ease-in-out;
     color: ${({ theme }) => theme.lightText};
   }
 `

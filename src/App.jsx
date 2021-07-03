@@ -17,14 +17,11 @@ import {
   NotFoundPage,
   ShopPage,
   Auth,
-  Panel,
+  Preview,
 } from './views/exports.jsx'
 
 import Menu from './components/Menu/Menu.jsx'
 import Cursor from './hooks/useCursor.jsx'
-
-import PrivateRoute from './routes/PrivateRoute.jsx'
-import ControlledRoute from './routes/ControlledRoute.jsx'
 
 function App() {
   const { isMenuOpen } = useMenu()
@@ -57,8 +54,8 @@ function App() {
                     animate={!isMenuOpen && { opacity: 1, y: '0%' }}
                     transition={{ duration: 0.7, type: 'spring' }}>
                     <Switch>
-                      <PrivateRoute path='/panel' component={Panel} />
-                      <ControlledRoute path='/authenticate' component={Auth} />
+                      <Route path='/posts/:slug' component={Preview} />
+                      <Route path='/authenticate' component={Auth} />
                       <Route path='/shop' component={ShopPage} />
                       <Route path='/writing' component={WritingPage} />
                       <Route path='/meta' component={MetaPage} />

@@ -1,33 +1,46 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+
 import BlogITem from '../../components/blogItem/BlogITem'
-import useFetch from '../../hooks/useFetch'
+import butter from '../../hooks/butter-client'
+import { motion as m } from 'framer-motion'
+import { Pulse } from '../exports'
 
 const _Writings = () => {
   const [posts, setPosts] = useState([])
 
-  useLayoutEffect(() => {
-    useFetch.get('/posts').then((res) => {
-      setPosts(res.data)
+  useEffect(() => {
+    butter.post.list({ page: 1, page_size: 10 }).then(function (response) {
+      setPosts(response.data)
     })
-  }, []) // eslint-disable-line
+  }, [])
+
+  console.log(posts)
 
   return (
     <>
       <Section>
         <Title>writing</Title>
         <Parag>A collection of what I know about coding and design</Parag>
-        <Items>
-          {posts.map((el) => {
-            return (
-              <BlogITem
-                key={el._id}
-                title={el.blogTitle}
-                time={new Date(el.date).toLocaleDateString()}
-                intro={el.blogdesc}
-              />
-            )
-          })}
+        <div className='divider' />
+        <Items initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          {posts.data === undefined ? (
+            <div style={{ width: '100%', textAlign: 'center' }}>
+              <Pulse />
+            </div>
+          ) : (
+            posts.data.map((el, key) => {
+              return (
+                <BlogITem
+                  key={key}
+                  title={el.title}
+                  slug={el.slug}
+                  time={new Date(el.created).toLocaleDateString()}
+                  intro={el.summary}
+                />
+              )
+            })
+          )}
         </Items>
       </Section>
     </>
@@ -65,6 +78,4 @@ const Parag = styled.p`
   letter-spacing: 0.25px;
 `
 
-const Items = styled.div`
-  margin: 2rem 0rem;
-`
+const Items = styled(m.div)``

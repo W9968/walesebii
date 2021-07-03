@@ -3,13 +3,9 @@ import axios from 'axios'
 import styled from 'styled-components'
 import { motion as m } from 'framer-motion'
 import { BsArrowLeft, BsLock } from 'react-icons/bs'
-import useFetch from '../../hooks/useFetch'
-import { useHistory } from 'react-router-dom'
 
 const _Auth = () => {
-  const history = useHistory()
   const [type, setType] = useState('')
-  const [pswd, setPswd] = useState('')
   const [rotate, setRotation] = useState(0)
 
   useEffect(() => {
@@ -36,34 +32,13 @@ const _Auth = () => {
           <Input
             type='password'
             onChange={(e) => {
-              setPswd(e.target.value)
               setType('')
             }}
           />
           <div
             onMouseEnter={() => setRotation(rotate + 180)}
             onMouseLeave={() => setRotation(rotate + 180)}>
-            <Button
-              onClick={() => {
-                useFetch
-                  .post('/auth', {
-                    pass: pswd,
-                  })
-                  .then((res) => {
-                    res.data.message === 'you good to go'
-                      ? setType('success')
-                      : setType('error')
-
-                    setTimeout(() => {
-                      if (res.data.message === 'you good to go') {
-                        sessionStorage.setItem('session', true)
-                        history.push('/panel')
-                      } else {
-                        sessionStorage.clear()
-                      }
-                    }, 1000)
-                  })
-              }}>
+            <Button>
               <m.span style={{ display: 'flex' }} animate={{ rotate: rotate }}>
                 <BsArrowLeft />
               </m.span>
