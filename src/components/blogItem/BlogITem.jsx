@@ -1,13 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
+import { motion as m } from 'framer-motion'
 
 const BlogITem = ({ slug, title, time, intro }) => {
   const history = useHistory()
 
   return (
     <>
-      <Card onClick={() => history.push(`/posts/${slug}`)}>
+      <Card
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        onClick={() => history.push(`/posts/${slug}`)}>
         <Col>
           <Timing>{time}</Timing>
         </Col>
@@ -22,7 +26,7 @@ const BlogITem = ({ slug, title, time, intro }) => {
 
 export default BlogITem
 
-const Card = styled.div`
+const Card = styled(m.div)`
   width: 100%;
   display: flex;
   flex-direction: row;

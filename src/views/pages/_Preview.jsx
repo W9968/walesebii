@@ -16,8 +16,6 @@ const _Preview = () => {
     butter.post.retrieve(slug).then((res) => setPost(res.data))
   })
 
-  console.log(post)
-
   return (
     <>
       <Wrapper>
@@ -107,10 +105,26 @@ const Body = styled.div`
     background-color: ${({ theme }) => theme.hover};
   }
 
+  a {
+    color: ${({ theme }) => theme.lightText};
+    &:hover {
+      background-color: ${({ theme }) => theme.hover};
+    }
+  }
+
   p {
     margin: 1rem 0;
     line-height: 2rem;
     font-size: 1.25rem;
+  }
+
+  blockquote {
+    > p {
+      font-size: 1rem;
+      font-style: oblique;
+    }
+    padding-left: 1rem;
+    border-left: 5px solid ${({ theme }) => theme.text};
   }
 `
 
