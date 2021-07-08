@@ -33,12 +33,22 @@ const _Meta = () => {
           <li>Styled-Components</li>
           <li>Sentry</li>
           <li>Vercel Web Servers</li>
-          <li>
-            <a style={{ color: 'white' }} href='https://buttercms.com'>
-              Butter CMS
-            </a>
-          </li>
         </List>
+        <div
+          style={{
+            padding: '1rem',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+          }}>
+          <a target={'_blank'} rel='noreferrer' href='https://buttercms.com'>
+            <img
+              width={250}
+              src='https://cdn.buttercms.com/RyJ7UhcVTCRqrCFXwgCo'
+              alt='butter cms'
+            />
+          </a>
+        </div>
       </Section>
     </>
   )
