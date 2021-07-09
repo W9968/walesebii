@@ -17,10 +17,7 @@ const SocialIcons = () => {
           rel='noreferrer'>
           <Twitter />
         </a>
-        <a
-          href='https://github.com/jagarkin'
-          target={'_blank'}
-          rel='noreferrer'>
+        <a href='https://github.com/orphyx' target={'_blank'} rel='noreferrer'>
           <Github />
         </a>
         <NavLink to='/meta'>
