@@ -11,13 +11,10 @@ const SocialIcons = () => {
   return (
     <>
       <Social>
-        <a
-          href='https://twitter.com/Jagarkin'
-          target={'_blank'}
-          rel='noreferrer'>
+        <a href='https://twitter.com/oryvle' target={'_blank'} rel='noreferrer'>
           <Twitter />
         </a>
-        <a href='https://github.com/orphyx' target={'_blank'} rel='noreferrer'>
+        <a href='https://github.com/oryale' target={'_blank'} rel='noreferrer'>
           <Github />
         </a>
         <NavLink to='/meta'>
