@@ -1,20 +1,20 @@
 {
-  "short_name": "Jagarkin",
+  "short_name": "ORYALE",
   "name": "Personal website",
   "icons": [
     {
       "src": "favicon.svg",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "svg"
+      "type": "image/svg"
     },
     {
       "src": "favicon.svg",
-      "type": "svg",
+      "type": "image/svg",
       "sizes": "192x192"
     },
     {
       "src": "favicon.svg",
-      "type": "svg",
+      "type": "image/svg",
       "sizes": "512x512"
     }
   ]
