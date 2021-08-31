@@ -11,6 +11,7 @@ import { lightTheme } from 'themes/light'
 import { useMenu } from 'hooks/useMenu'
 import { useTheme } from 'hooks/useTheme'
 import Cursor from 'hooks/useCursor'
+import ScrollTop from 'hooks/useScrollTop'
 
 // global style
 import { GlobalStyle, Wrapper, Main } from 'styles/Globale.element'
@@ -42,6 +43,7 @@ function App() {
           <Cursor />
           <Wrapper>
             <Router>
+              <ScrollTop />
               <Main>
                 <NavBar mode={theme} modeFunc={toggleTheme} />{' '}
                 <span style={{ flex: 1 }}>
