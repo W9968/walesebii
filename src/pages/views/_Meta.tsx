@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section, Title, Parag, List } from '../../styles/Meta.element'
+import { Section, Title, Parag, List } from 'styles/Meta.element'
 
 const _Meta: React.FC = () => {
   return (

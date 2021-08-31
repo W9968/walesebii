@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import { Card, Col, Timing, HeadLine, Intro } from '../../styles/Blog.elemnt'
+import { Card, Col, Timing, HeadLine, Intro } from 'styles/Blog.elemnt'
 
 type BlogItemProps = {
   slug: string

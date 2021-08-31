@@ -1,5 +1,6 @@
 import React from 'react'
-import { Wrapper, Name, UnderLine } from '../../styles/Contact.element'
+import { Wrapper, Name, UnderLine } from 'styles/Contact.element'
+
 type InformationProps = {
   info: string
   svg: React.ReactNode

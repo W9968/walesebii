@@ -4,19 +4,19 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 //theme imports
-import { darkTheme } from './themes/dark'
-import { lightTheme } from './themes/light'
+import { darkTheme } from 'themes/dark'
+import { lightTheme } from 'themes/light'
 
 // hooks calls
-import { useMenu } from './hooks/useMenu'
-import { useTheme } from './hooks/useTheme'
-import Cursor from './hooks/useCursor'
+import { useMenu } from 'hooks/useMenu'
+import { useTheme } from 'hooks/useTheme'
+import Cursor from 'hooks/useCursor'
 
 // global style
-import { GlobalStyle, Wrapper, Main } from './styles/Globale.element'
+import { GlobalStyle, Wrapper, Main } from 'styles/Globale.element'
 
 // compoents
-import { NavBar, MenuBar, Footer } from './components/exports'
+import { NavBar, MenuBar, Footer } from 'components/exports'
 import {
   Home,
   Meta,
@@ -26,7 +26,7 @@ import {
   Preview,
   Project,
   Shop,
-} from './pages/exports'
+} from 'pages/exports'
 
 function App() {
   const { isMenuOpen } = useMenu()

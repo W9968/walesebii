@@ -1,6 +1,6 @@
 import React from 'react'
-import { useMenu } from '../../../hooks/useMenu'
-import { Wrapper, Name, Command, Parag } from '../../../styles/Header.element'
+import { useMenu } from 'hooks/useMenu'
+import { Wrapper, Name, Command, Parag } from 'styles/Header.element'
 
 const play: HTMLAudioElement = new Audio('./sound/hover.mp3')
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import butter from '../../hooks/useButterClient'
-import { BlogCard, Pulse } from '../../components/exports'
-import { Section, Title, Parag, Items } from '../../styles/Blog.elemnt'
+import butter from 'hooks/useButterClient'
+import { BlogCard, Pulse } from 'components/exports'
+import { Section, Title, Parag, Items } from 'styles/Blog.elemnt'
 
 interface IResponse {
   meta: any

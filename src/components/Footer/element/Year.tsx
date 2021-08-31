@@ -1,6 +1,6 @@
 import React from 'react'
 import { BsDot } from 'react-icons/bs'
-import { Time } from '../../../styles/Footer.element'
+import { Time } from 'styles/Footer.element'
 
 const Year: React.FC = () => {
   return (

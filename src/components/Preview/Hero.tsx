@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title } from './../../styles/Preview.element'
+import { Title } from 'styles/Preview.element'
 
 type HeroProps = {
   title: string

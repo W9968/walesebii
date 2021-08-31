@@ -1,7 +1,7 @@
 import React from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 import { useHistory } from 'react-router-dom'
-import { NextPost, Button } from '../../styles/Preview.element'
+import { NextPost, Button } from 'styles/Preview.element'
 
 type NextPostProps = {
   slug: string

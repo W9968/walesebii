@@ -1,7 +1,7 @@
 import React from 'react'
-import { Parag, Section, Title } from './../../styles/NotFound.element'
+import { Parag, Section, Title } from 'styles/NotFound.element'
 
-const _404 = () => {
+const _404: React.FC = () => {
   return (
     <>
       <Section>

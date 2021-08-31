@@ -1,10 +1,15 @@
 import React from 'react'
+import { ContactInfo } from 'components/exports'
 import { BiPhone, BiEnvelope } from 'react-icons/bi'
-import { ContactInfo } from '../../components/exports'
-import { Section, Title, Parag } from '../../styles/Contact.element'
+import { Section, Title, Parag } from 'styles/Contact.element'
 
-const _Contact = () => {
-  const cords = [
+interface Iarray {
+  icon: React.ReactChild
+  text: string
+}
+
+const _Contact: React.FC = () => {
+  const cords: Iarray[] = [
     { icon: <BiPhone />, text: '+216 58 06 18 35' },
     { icon: <BiEnvelope />, text: 'noreply@walee.tech' },
   ]
@@ -16,7 +21,7 @@ const _Contact = () => {
         <Parag>Get in touch.</Parag>
 
         <cite>
-          {cords.map((cord, i: number) => {
+          {cords.map((cord: Iarray, i: number) => {
             return <ContactInfo key={i} svg={cord.icon} info={cord.text} />
           })}
         </cite>

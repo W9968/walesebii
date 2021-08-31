@@ -1,6 +1,6 @@
 import React from 'react'
-import { useMenu } from '../../hooks/useMenu'
-import { Container, Link } from '../../styles/Header.element'
+import { useMenu } from 'hooks/useMenu'
+import { Container, Link } from 'styles/Header.element'
 // imports
 import Logo from './element/Logo'
 import Toggle from './element/Toggle'

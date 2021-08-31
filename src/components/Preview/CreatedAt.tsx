@@ -1,6 +1,6 @@
 import React from 'react'
 import moment from 'moment'
-import { Timer } from '../../styles/Preview.element'
+import { Timer } from 'styles/Preview.element'
 
 type CreatedAtProps = {
   date: string

@@ -1,4 +1,12 @@
-export const projects = [
+export interface Iprojects {
+  title: string
+  summery: string
+  image: string
+  url: string
+  language: string[]
+}
+
+export const projects: Iprojects[] = [
   {
     title: 'hotot ui',
     summery: 'simple, modular and accessible component library for react',

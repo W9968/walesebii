@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-  Container,
-  Image,
-  Overly,
-  Title,
-  Parag,
-} from '../../styles/Projects.element'
+import { Container, Image, Overly, Title, Parag } from 'styles/Projects.element'
 
 type CardProps = {
   title: string

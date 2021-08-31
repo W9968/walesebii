@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section, Title, Parag } from '../../styles/Shop.element'
+import { Section, Title, Parag } from 'styles/Shop.element'
 
 const _Shop: React.FC = () => {
   return (

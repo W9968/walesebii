@@ -1,6 +1,6 @@
 import React from 'react'
-import { Card, projects } from '../../components/exports'
-import { Section, Heading, Paragraphe } from '../../styles/Projects.element'
+import { Card, projects } from 'components/exports'
+import { Section, Heading, Paragraphe } from 'styles/Projects.element'
 
 interface Ielement {
   title: string

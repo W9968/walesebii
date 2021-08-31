@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { useMenu } from './../../../hooks/useMenu'
-import { Social, Twitter, Github, Info } from '../../../styles/Footer.element'
+import { useMenu } from 'hooks/useMenu'
+import { Social, Twitter, Github, Info } from 'styles/Footer.element'
 
 const SocialIcons: React.FC = () => {
   const { closeMenu } = useMenu()

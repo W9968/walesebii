@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   BiHomeAlt,
   BiFile,
@@ -6,7 +7,14 @@ import {
   BiShoppingBag,
 } from 'react-icons/bi'
 
-export const paths: any[] = [
+export interface Ipaths {
+  location: string
+  name: string
+  icon: React.ReactChild
+  command: string
+}
+
+export const paths: Ipaths[] = [
   { location: '/', name: 'home', icon: <BiHomeAlt />, command: 'h' },
   { location: '/project', name: 'project', icon: <BiFile />, command: 'p' },
   { location: '/writing', name: 'writing', icon: <BiEdit />, command: 'w' },

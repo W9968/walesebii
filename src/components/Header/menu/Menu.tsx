@@ -1,11 +1,11 @@
 import React from 'react'
-import { paths } from './paths'
 import MenuItem from './MenuItem'
+import { Ipaths, paths } from './paths'
 
 const Menu: React.FC = () => {
   return (
     <>
-      {paths.map((item, i: number) => {
+      {paths.map((item: Ipaths, i: number) => {
         return (
           <MenuItem
             key={i}

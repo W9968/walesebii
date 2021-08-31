@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
+import butter from 'hooks/useButterClient'
 import { useParams } from 'react-router-dom'
-import butter from '../../hooks/useButterClient'
-import { Body, Changer, Wrapper } from '../../styles/Preview.element'
+import { Body, Changer, Wrapper } from 'styles/Preview.element'
 import {
   NextPrev,
   PrevPrev,
   PrevTitle,
   Pulse,
   TimeZone,
-} from '../../components/exports'
+} from 'components/exports'
 
 interface IResponse {
   meta: any
