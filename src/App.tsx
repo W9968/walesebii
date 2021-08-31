@@ -58,8 +58,8 @@ function App() {
                   ) : (
                     <motion.div
                       key='poper'
-                      initial={{ opacity: 0, y: '-10%' }}
-                      animate={!isMenuOpen && { opacity: 1, y: '0%' }}
+                      initial={{ opacity: 0 }}
+                      animate={!isMenuOpen && { opacity: 1 }}
                       transition={{ duration: 0.7, type: 'spring' }}>
                       <Switch>
                         <Route path='/shop' component={Shop} />
