@@ -12,8 +12,8 @@ declare module 'styled-components' {
 }
 
 export const darkTheme: DefaultTheme = {
-  text: '#eaeaea',
-  body: '#111111',
+  text: '#d7dae1',
+  body: '#1f1f25',
   hover: '#222222',
   select: '#1bffcd',
   lightText: '#666666',
