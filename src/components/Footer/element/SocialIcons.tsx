@@ -11,7 +11,7 @@ const SocialIcons: React.FC = () => {
         <a href='https://twitter.com/oryvle' target={'_blank'} rel='noreferrer'>
           <Twitter />
         </a>
-        <a href='https://github.com/oryale' target={'_blank'} rel='noreferrer'>
+        <a href='https://github.com/nyuuke' target={'_blank'} rel='noreferrer'>
           <Github />
         </a>
         <NavLink to='/meta' onClick={closeMenu}>
