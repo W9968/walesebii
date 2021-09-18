@@ -38,7 +38,7 @@ function App() {
   } else {
     return (
       <>
-        <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+        <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
           <GlobalStyle />
           <Cursor />
           <Wrapper>

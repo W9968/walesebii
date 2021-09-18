@@ -48,6 +48,6 @@ export const Info = styled(AiFillQuestionCircle)`
   font-size: 1.5rem;
   color: ${({ theme }) => theme.text};
   &:hover {
-    color: #1bffcd;
+    color: #ee0000;
   }
 `

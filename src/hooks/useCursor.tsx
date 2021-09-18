@@ -14,7 +14,7 @@ const Cursor: React.FC = () => {
       <AnimatedCursor
         innerSize={10}
         outerSize={8}
-        color='27, 255, 205'
+        color='238, 0, 0'
         outerAlpha={0.2}
         innerScale={0.7}
         outerScale={5}

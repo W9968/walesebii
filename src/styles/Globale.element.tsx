@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
   ::selection {
-    color: #111;
+    color: #fff;
     background-color: ${(props) => props.theme.select}
   }
   /* width */
