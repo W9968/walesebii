@@ -17,10 +17,10 @@ const Pulse = styled.div`
   opacity: 0;
   width: 18px;
   height: 18px;
-  border: 3px solid #999;
   text-align: center;
   border-radius: 50%;
   display: inline-block;
   animation: ${pulsate} 1s ease-out;
   animation-iteration-count: infinite;
+  border: 3px solid ${(props) => props.theme.text};
 `
