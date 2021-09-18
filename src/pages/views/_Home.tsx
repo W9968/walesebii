@@ -11,7 +11,7 @@ const _Home: React.FC = () => {
           occasionally a photographer, definitely not practicing minimalist,
           sharing what I know about design and code.
         </Parag>
-        <Parag>currently a Student.</Parag>
+        <Parag>currently a Software Engineering Student.</Parag>
       </Section>
     </>
   )
