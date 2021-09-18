@@ -1,8 +1,9 @@
 import React from 'react'
+import useSound from 'use-sound'
 import { useMenu } from 'hooks/useMenu'
 import { Wrapper, Name, Command, Parag } from 'styles/Header.element'
 
-const play: HTMLAudioElement = new Audio('./sound/hover.mp3')
+import soundElement from 'components/sound/hover.mp3'
 
 type MenutemProps = {
   link: string
@@ -13,10 +14,11 @@ type MenutemProps = {
 
 const MenuItem: React.FC<MenutemProps> = ({ link, svg, path, command }) => {
   const { closeMenu } = useMenu()
+  const [play] = useSound(soundElement, { interrupt: true })
 
   return (
     <>
-      <Wrapper to={link} onClick={closeMenu} onMouseEnter={() => play.play()}>
+      <Wrapper to={link} onClick={closeMenu} onMouseEnter={() => play()}>
         <Name>
           <span className='icon'>{svg}</span>
           <Parag className='title'>{path}</Parag>

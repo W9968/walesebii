@@ -1,10 +1,11 @@
 import React from 'react'
 
+import useSound from 'use-sound'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import { BiSun, BiMoon } from 'react-icons/bi'
 
-const play: HTMLAudioElement = new Audio('./sound/toggletheme.mp3')
+import soundElement from 'components/sound/toggletheme.mp3'
 
 type ToggleProps = {
   theme: string
@@ -12,6 +13,7 @@ type ToggleProps = {
 }
 
 const Toggle: React.FC<ToggleProps> = ({ theme, toggleTheme }) => {
+  const [play] = useSound(soundElement, { interrupt: true })
   return (
     <>
       {theme === 'dark' ? (
@@ -19,7 +21,7 @@ const Toggle: React.FC<ToggleProps> = ({ theme, toggleTheme }) => {
           animate={{ opacity: 1 }}
           whileTap={{ rotate: 180 }}
           transition={{ type: 'spring' }}
-          onMouseDownCapture={() => play.play()}>
+          onMouseDownCapture={() => play()}>
           <Moon onClick={toggleTheme} />
         </Btn>
       ) : (
@@ -27,7 +29,7 @@ const Toggle: React.FC<ToggleProps> = ({ theme, toggleTheme }) => {
           animate={{ opacity: 1 }}
           whileTap={{ rotate: 180 }}
           transition={{ type: 'spring' }}
-          onMouseDownCapture={() => play.play()}>
+          onMouseDownCapture={() => play()}>
           <Sun onClick={toggleTheme} />
         </Btn>
       )}
