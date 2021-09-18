@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
@@ -12,30 +12,20 @@ type ToggleProps = {
 }
 
 const Toggle: React.FC<ToggleProps> = ({ theme, toggleTheme }) => {
-  const [rotation, setRotation] = useState(0)
-
-  useEffect((): void => {
-    setRotation(0)
-  }, [])
-
   return (
     <>
       {theme === 'dark' ? (
         <Btn
-          animate={{ rotate: rotation }}
-          onClick={() => {
-            setRotation(rotation - 360)
-          }}
+          animate={{ opacity: 1 }}
+          whileTap={{ rotate: 180 }}
           transition={{ type: 'spring' }}
           onMouseDownCapture={() => play.play()}>
           <Moon onClick={toggleTheme} />
         </Btn>
       ) : (
         <Btn
-          animate={{ rotate: rotation }}
-          onClick={() => {
-            setRotation(rotation - 360)
-          }}
+          animate={{ opacity: 1 }}
+          whileTap={{ rotate: 180 }}
           transition={{ type: 'spring' }}
           onMouseDownCapture={() => play.play()}>
           <Sun onClick={toggleTheme} />
