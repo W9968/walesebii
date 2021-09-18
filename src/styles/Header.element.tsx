@@ -86,7 +86,7 @@ export const Command = styled.p`
   align-items: center;
   border-radius: 12px;
   font-size: 1.125rem;
-  filter: contrast(0.75);
+  filter: contrast(0.8);
   justify-content: center;
   text-transform: capitalize;
   background-color: ${(props) => props.theme.hover};

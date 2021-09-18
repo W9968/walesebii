@@ -14,7 +14,7 @@ declare module 'styled-components' {
 export const lightTheme: DefaultTheme = {
   text: '#1f1f25',
   body: '#d7dae1',
-  hover: '#efefef',
+  hover: '#e7e9ed',
   select: '#1bffcd',
-  lightText: '#666666',
+  lightText: '#d7dae1',
 }

@@ -16,5 +16,5 @@ export const darkTheme: DefaultTheme = {
   body: '#1f1f25',
   hover: '#222222',
   select: '#1bffcd',
-  lightText: '#666666',
+  lightText: '#d7dae1',
 }
