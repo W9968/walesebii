@@ -26,8 +26,8 @@ export const Link = styled.button`
   background-color: transparent;
   justify-content: center;
   color: ${(props) => props.theme.text};
-  &:hover,
-  &:focus {
+
+  &:hover {
     background-color: ${(props) => props.theme.hover};
   }
 `
