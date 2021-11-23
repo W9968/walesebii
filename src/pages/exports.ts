@@ -1,8 +1,0 @@
-export { default as Home } from './views/_Home'
-export { default as Meta } from './views/_Meta'
-export { default as NotFound } from './views/_404'
-export { default as Contact } from './views/_Contact'
-export { default as Blogs } from './views/_Writing'
-export { default as Preview } from './views/_Preview'
-export { default as Project } from './views/_Projects'
-export { default as Shop } from './views/_Shop'
