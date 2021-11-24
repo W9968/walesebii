@@ -1,12 +1,14 @@
-import { FC } from 'react'
+import type { NextPage } from 'next'
+import { variantsIn } from 'animation/variants'
 import { Section, Title, Parag, List } from './../styles/Meta.module'
 
-const meta: FC = () => {
+const meta: NextPage = () => {
   return (
     <Section
-      initial={{ opacity: 0, scale: 0.6 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ type: 'just', delay: 0.1 }}>
+      transition={{ duration: 0.4, ease: 'easeOut' }}
+      initial={'initial'}
+      animate={'animation'}
+      variants={variantsIn}>
       <Title>meta</Title>
       <Parag>
         {"I've"} poured my heart and soul into making this little corner of the

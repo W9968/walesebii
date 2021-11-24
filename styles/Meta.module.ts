@@ -20,11 +20,6 @@ export const Title = styled.h2`
   letter-spacing: 1px;
   text-transform: capitalize;
   font-size: ${(props) => props.theme.units._36};
-  /* gradient */
-  /* background-clip: text;
-  background: -webkit-linear-gradient(right, #ddd6f3 80%, #faaca8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
   color: ${(props) => props.theme.accent.hover};
 `
 

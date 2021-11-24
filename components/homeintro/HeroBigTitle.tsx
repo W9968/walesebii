@@ -1,12 +1,14 @@
 import { FC } from 'react'
+import { variantsIn } from 'animation/variants'
 import { Parag, Section, Title } from 'styles/home.module'
 
 const HeroBigTitle: FC = () => {
   return (
     <Section
-      initial={{ opacity: 0, scale: 0.6 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ type: 'just', delay: 0.1 }}>
+      transition={{ duration: 0.4, ease: 'easeOut' }}
+      initial={'initial'}
+      animate={'animation'}
+      variants={variantsIn}>
       <Title>Walee Sebiiy</Title>
       <Parag>
         Crafting interfaces. building performant software and web experience.
