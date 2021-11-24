@@ -5,7 +5,7 @@ import { Card, Col, Timing, HeadLine, Intro } from 'styles/Card.module'
 
 const BlogCard: FC<Idata> = ({ slug, title, summary, published }) => {
   return (
-    <Link href={`/shelf/${slug}`} passHref>
+    <Link href={{ pathname: '/shelf/[slug]', query: { slug: slug } }} passHref>
       <Card initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <Col>
           <Timing>{published}</Timing>
