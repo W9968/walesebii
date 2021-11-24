@@ -9,7 +9,7 @@ const HeroBigTitle: FC = () => {
       initial={'initial'}
       animate={'animation'}
       variants={variantsIn}>
-      <Title>Walee Sebiiy</Title>
+      <Title>/sebiiy.walee</Title>
       <Parag>
         Crafting interfaces. Building performant software and web experience,
         trying to achieve minimalism, sharing what i know about design and code,

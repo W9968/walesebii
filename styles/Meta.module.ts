@@ -18,7 +18,6 @@ export const Section = styled(motion.section)`
 export const Title = styled.h2`
   font-weight: 700;
   letter-spacing: 1px;
-  text-transform: capitalize;
   font-size: ${(props) => props.theme.units._36};
   color: ${(props) => props.theme.scheme.text};
 `

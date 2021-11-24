@@ -48,9 +48,9 @@ export const darkTheme: DefaultTheme = {
     text: '#e4e4e4',
   },
   accent: {
-    primary: '#ff2957',
+    primary: '#ff5277',
     secondary: '#9e9e9e',
-    hover: '#ff5277',
+    hover: '#ff2957',
   },
   units: {
     _16: '1em',

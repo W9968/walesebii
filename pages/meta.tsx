@@ -9,7 +9,7 @@ const meta: NextPage = () => {
       initial={'initial'}
       animate={'animation'}
       variants={variantsIn}>
-      <Title>meta</Title>
+      <Title>/meta</Title>
       <Parag>
         {"I've"} poured my heart and soul into making this little corner of the
         internet feel like me. I {"don't"} expect anyone else to care that much,

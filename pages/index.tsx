@@ -1,8 +1,15 @@
 import type { NextPage } from 'next'
-import { LandingPageTitle } from 'components/export'
+import { LandPage } from 'styles/home.module'
+import { JamStack, JamWriting, LandingPageTitle } from 'components/export'
 
 const Home: NextPage = () => {
-  return <LandingPageTitle />
+  return (
+    <LandPage>
+      <LandingPageTitle />
+      <JamStack />
+      <JamWriting />
+    </LandPage>
+  )
 }
 
 export default Home

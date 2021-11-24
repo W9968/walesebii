@@ -1,6 +1,12 @@
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
+export const LandPage = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+`
+
 export const Section = styled(motion.section)`
   margin-top: ${(props) => props.theme.units._28};
 `
@@ -8,7 +14,6 @@ export const Section = styled(motion.section)`
 export const Title = styled.h2`
   font-weight: 700;
   letter-spacing: 1px;
-  text-transform: capitalize;
   font-size: ${(props) => props.theme.units._36};
 `
 

@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
   
   ::selection {
     color: #fff;
-    background-color: ${(props) => props.theme.accent.primary}
+    background-color: ${(props) => props.theme.accent.hover}
   }
   
   /* width */
