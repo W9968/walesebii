@@ -5,8 +5,8 @@ export const SwitchToggleTheme = styled.button`
   padding: 8px;
   display: flex;
   outline: none;
-  font-size: 20px;
   cursor: pointer;
+  font-size: 22.5px;
   align-items: center;
   flex-direction: column;
   justify-content: center;

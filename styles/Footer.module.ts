@@ -24,7 +24,7 @@ export const Social = styled.div`
 `
 
 export const Github = styled(RiGithubFill)`
-  font-size: 1.3em;
+  font-size: 1.5rem;
   margin: 0px 10px;
   cursor: pointer;
   color: ${(props) => props.theme.scheme.text};
@@ -33,7 +33,7 @@ export const Github = styled(RiGithubFill)`
   }
 `
 export const Twitter = styled(RiTwitterFill)`
-  font-size: 1.3em;
+  font-size: 1.5rem;
   cursor: pointer;
   color: ${(props) => props.theme.scheme.text};
   &:hover {
@@ -42,7 +42,7 @@ export const Twitter = styled(RiTwitterFill)`
 `
 
 export const Info = styled(RiInformationFill)`
-  font-size: 1.3em;
+  font-size: 1.5rem;
   cursor: pointer;
   color: ${(props) => props.theme.scheme.text};
   &:hover {

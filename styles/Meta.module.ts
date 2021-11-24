@@ -20,7 +20,7 @@ export const Title = styled.h2`
   letter-spacing: 1px;
   text-transform: capitalize;
   font-size: ${(props) => props.theme.units._36};
-  color: ${(props) => props.theme.accent.hover};
+  color: ${(props) => props.theme.scheme.text};
 `
 
 export const List = styled.ul`
@@ -28,6 +28,7 @@ export const List = styled.ul`
   line-height: 1.7em;
   letter-spacing: 0.25px;
   font-size: ${(props) => props.theme.units._16};
+  color: ${(props) => props.theme.accent.secondary};
 `
 
 export const Parag = styled.p`
@@ -35,4 +36,5 @@ export const Parag = styled.p`
   line-height: 1.7em;
   letter-spacing: 0.25px;
   font-size: ${(props) => props.theme.units._16};
+  color: ${(props) => props.theme.accent.secondary};
 `

@@ -30,7 +30,7 @@ export const lightTheme: DefaultTheme = {
   },
   accent: {
     primary: '#ff2957',
-    secondary: '',
+    secondary: '#656565',
     hover: '#ff5277',
   },
   units: {
@@ -45,11 +45,11 @@ export const lightTheme: DefaultTheme = {
 export const darkTheme: DefaultTheme = {
   scheme: {
     body: '#0e141b',
-    text: '#f2f2f2',
+    text: '#e4e4e4',
   },
   accent: {
     primary: '#ff2957',
-    secondary: '',
+    secondary: '#9e9e9e',
     hover: '#ff5277',
   },
   units: {

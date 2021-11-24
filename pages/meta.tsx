@@ -23,7 +23,6 @@ const meta: NextPage = () => {
           Sound design! Not much, a few whooshes and bleeps here and there.
         </li>
         <li>Fascinating hover interactions </li>
-        <li>Custom cursor to make your experience even better</li>
       </List>
 
       <div className='divider' />

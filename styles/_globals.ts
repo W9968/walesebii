@@ -11,12 +11,13 @@ export const GlobalStyle = createGlobalStyle`
   body {  
     display:flex;
     max-width: 100%;
+    font-weight: 500;
     min-height: 100vh;
     flex-direction: column;
     backface-visibility:hidden;
-    font-family: 'Outfit', sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    font-family: 'Open Sans', sans-serif;
     color: ${(props) => props.theme.scheme.text};
     background-color: ${(props) => props.theme.scheme.body};
   }

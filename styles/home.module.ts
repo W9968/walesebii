@@ -17,4 +17,5 @@ export const Parag = styled.p`
   line-height: 1.7em;
   letter-spacing: 0.25px;
   font-size: ${(props) => props.theme.units._16};
+  color: ${(props) => props.theme.accent.secondary};
 `
