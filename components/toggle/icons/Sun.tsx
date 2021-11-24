@@ -1,4 +1,3 @@
-import useSound from 'use-sound'
 import { motion } from 'framer-motion'
 import { transition, whileTap } from 'animation/constants'
 
@@ -13,8 +12,6 @@ const Sun = () => {
     animate: { scale: 1, transition },
   }
 
-  const [play] = useSound('/sound/clickon.mp3')
-
   return (
     <motion.svg
       width='1em'
@@ -23,8 +20,7 @@ const Sun = () => {
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
       whileTap={whileTap}
-      style={{ originX: '50%', originY: '50%' }}
-      onClick={(): void => play()}>
+      style={{ originX: '50%', originY: '50%' }}>
       <motion.circle
         cx='11.9998'
         cy='11.9998'
