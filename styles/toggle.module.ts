@@ -11,6 +11,6 @@ export const SwitchToggleTheme = styled.button`
   flex-direction: column;
   justify-content: center;
   color: ${(props) => props.theme.scheme.text};
-  border-radius: ${(props) => props.theme.units._14};
+  border-radius: ${(props) => props.theme.units._16};
   background-color: ${(props) => props.theme.scheme.body};
 `
