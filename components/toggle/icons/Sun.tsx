@@ -1,6 +1,6 @@
 import useSound from 'use-sound'
 import { motion } from 'framer-motion'
-import { transition, whileTap } from '../constant/constants'
+import { transition, whileTap } from 'animation/constants'
 
 const Sun = () => {
   const raysVariants = {
