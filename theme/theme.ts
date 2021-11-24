@@ -10,6 +10,7 @@ declare module 'styled-components' {
     accent: {
       primary: string
       secondary: string
+      third: string
       hover: string
     }
 
@@ -31,6 +32,7 @@ export const lightTheme: DefaultTheme = {
   accent: {
     primary: '#ff2957',
     secondary: '#656565',
+    third: '#eaeaea',
     hover: '#ff5277',
   },
   units: {
@@ -50,6 +52,7 @@ export const darkTheme: DefaultTheme = {
   accent: {
     primary: '#ff5277',
     secondary: '#9e9e9e',
+    third: '#262e38',
     hover: '#ff2957',
   },
   units: {
