@@ -1,14 +1,13 @@
 import type { NextPage } from 'next'
-import { LandPage } from 'styles/home.module'
-import { JamStack, JamWriting, LandingPageTitle } from 'components/export'
+import Head from 'next/head'
+import Image from 'next/image'
+import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <LandPage>
-      <LandingPageTitle />
-      <JamStack />
-      <JamWriting />
-    </LandPage>
+    <div className={styles.container}>
+      <p className={styles.content}>Currently re-building</p>
+    </div>
   )
 }
 
