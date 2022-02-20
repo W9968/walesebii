@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   ::selection {
-    color: #fff;
+    color: #111;
     background-color: ${(props) => props.theme.scheme.foreground}
   }
   

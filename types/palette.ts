@@ -8,6 +8,11 @@ declare module 'styled-components' {
       foreground: string
     }
 
+    accent: {
+      light_forground: string
+      light_background: string
+    }
+
     units: {
       _16: string // p
       _18: string // h4
@@ -20,13 +25,18 @@ declare module 'styled-components' {
 
 export const theming: DefaultTheme = {
   scheme: {
-    background: '#16161a',
-    foreground: '#fffffe',
+    background: '#121212',
+    foreground: '#fcfbfc',
+  },
+
+  accent: {
+    light_forground: '#94a1b2',
+    light_background: '#262626',
   },
 
   units: {
     _16: '1em',
-    _18: '1.125',
+    _18: '1.125em',
     _28: '1.75em',
     _36: '2.25em',
     _48: '3em',
