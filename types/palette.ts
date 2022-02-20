@@ -25,8 +25,8 @@ declare module 'styled-components' {
 
 export const theming: DefaultTheme = {
   scheme: {
-    background: '#121212',
-    foreground: '#fcfbfc',
+    background: '#000000',
+    foreground: '#fefbfc',
   },
 
   accent: {

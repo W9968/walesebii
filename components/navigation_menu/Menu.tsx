@@ -6,7 +6,7 @@ import { arrayRoutesMenu, IrouteNavigation } from './routesMenu.interface'
 const Menu: FC = () => {
   return (
     <NavigationListContainer>
-      {arrayRoutesMenu.map((el: IrouteNavigation, key) => {
+      {arrayRoutesMenu.map((el: IrouteNavigation, key: number) => {
         return (
           <Link key={key} passHref href={el.path}>
             <NavigationLink>{el.name}</NavigationLink>

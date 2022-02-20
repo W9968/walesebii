@@ -1,7 +1,16 @@
+import { LandingView } from 'components/export'
 import type { NextPage } from 'next'
+import Head from 'next/head'
 
 const Home: NextPage = () => {
-  return <></>
+  return (
+    <>
+      <Head>
+        <title>Walee Sebiiy</title> {/* eslint-disable-line */}
+      </Head>
+      <LandingView />
+    </>
+  )
 }
 
 export default Home

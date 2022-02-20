@@ -5,18 +5,18 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
   }
   html,
   body {  
     display:flex;
     max-width: 100%;
-    font-weight: 500;
+    font-weight: 400;
     min-height: 100vh;
     flex-direction: column;
     backface-visibility:hidden;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    font-family: 'Inter', sans-serif;
     color: ${(props) => props.theme.scheme.foreground};
     background-color: ${(props) => props.theme.scheme.background};
   }
@@ -49,4 +49,7 @@ export const GlobalStyle = createGlobalStyle`
   h4 { line-height: 1.2em }
   p { line-height: 1.375em }
   h2,h3 { line-height: 1.25em}
+  button, input, a {
+    font-family: 'Inter', sans-serif;
+  }
 `

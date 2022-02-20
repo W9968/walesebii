@@ -21,7 +21,7 @@ export const Main = styled.main`
 
 export const Section = styled.section`
   padding: ${(props) => props.theme.units._16};
-  &:not(:first-child, :last-child) {
+  &:not(:first-child) {
     flex: 1;
   }
 `
