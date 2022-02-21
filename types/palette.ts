@@ -30,8 +30,8 @@ export const theming: DefaultTheme = {
   },
 
   accent: {
-    light_forground: '#949192',
-    light_background: '#262626',
+    light_forground: '#747172',
+    light_background: '#121212',
   },
 
   units: {

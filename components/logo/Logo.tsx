@@ -26,7 +26,14 @@ const Button = styled(motion.button)`
   border: none;
   outline: none;
   cursor: pointer;
+  font-size: 20px;
   background: transparent;
+
+  > p {
+    font-weight: 600;
+    font-family: 'Inter';
+    color: ${({ theme }) => theme.scheme.foreground};
+  }
 `
 
 const Svg = styled.svg`

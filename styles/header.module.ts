@@ -21,16 +21,13 @@ export const NavigationLink = styled.button`
   outline: none;
   cursor: pointer;
   background: none;
-  font-weight: 600;
-  padding: 10px 24px;
-  border-radius: 5px;
+  font-weight: 500;
+  padding: 10px 18px;
+  display: inline-block;
   letter-spacing: 0.5px;
   text-decoration: none;
   text-transform: capitalize;
+  transition: 300ms ease-in-out;
   font-size: ${({ theme }) => theme.units._16};
   color: ${({ theme }) => theme.scheme.foreground};
-
-  &:hover {
-    background: ${({ theme }) => theme.accent.light_background};
-  }
 `
