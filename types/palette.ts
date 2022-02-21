@@ -30,7 +30,7 @@ export const theming: DefaultTheme = {
   },
 
   accent: {
-    light_forground: '#94a1b2',
+    light_forground: '#949192',
     light_background: '#262626',
   },
 

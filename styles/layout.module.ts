@@ -5,7 +5,7 @@ export const Main = styled.main`
   height: 100vh;
   display: flex;
   max-width: 1400px;
-  min-height: 100vh;
+  min-height: 100%;
   margin: 0rem auto;
   padding-left: 16px;
   padding-right: 16px;

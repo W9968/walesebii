@@ -28,22 +28,21 @@ export const GlobalStyle = createGlobalStyle`
   
   /* width */
   ::-webkit-scrollbar {
-    width: 5px;
+    width: 0px;
     height: 5px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
     margin-top: 5px;
-    background: none; 
     margin-bottom: 5px;
+    background-color: none
     
   }
  
   /* Handle */
   ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: ${(props) => props.theme.scheme.background};
   }
   h1 { line-height: 1.05em}
   h4 { line-height: 1.2em }

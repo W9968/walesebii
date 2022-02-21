@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes, Keyframes } from 'styled-components'
 import { a } from '@react-spring/web'
 
 export const LandingContainer = styled.div`
@@ -14,6 +14,12 @@ export const Title = styled.div`
   display: flex;
 `
 
+const gradient = keyframes`
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+`
+
 export const Heading = styled.div`
   display: flex;
   user-select: none;
@@ -25,15 +31,16 @@ export const Heading = styled.div`
   & .animated {
     background-clip: text;
     background: linear-gradient(
-      271deg,
+      90deg,
       #a0e9ff 30%,
       #a162e8 50%,
       #f093b0 70%,
       #edca85 94%
     );
+    background-size: 150% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: matrix(1, 0, 0, 1, 0, 0);
+    animation: ${gradient} 10s ease infinite;
   }
 `
 
