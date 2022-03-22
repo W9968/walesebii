@@ -26,8 +26,8 @@ export const theming: DefaultTheme = {
   scheme: {
     background: '#000000',
     foreground: '#fffffc',
-    // dominant: '#96e6a1',
-    dominant: '#4facfe',
+    // dominant: '#8ec5fc',
+    dominant: '#96e6a1',
 
     accent_1: '#f9f9f9',
     accent_2: '#596164',

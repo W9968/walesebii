@@ -23,4 +23,4 @@ type IrouteNavigation = {
   name: string
 }
 
-const arrayRoutesMenu: IrouteNavigation[] = [{ path: '/blogs', name: 'shelf' }]
+const arrayRoutesMenu: IrouteNavigation[] = [{ path: '/blog', name: 'shelf' }]

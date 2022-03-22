@@ -1,10 +1,10 @@
+import { FC } from 'react'
+import { Spin } from 'components/export'
+import { CardWrapper, Container, PostGrid } from 'styles/shelf.module'
+
 import moment from 'moment'
 import Link from 'next/link'
-import butter from 'hooks/useButter'
 import Navigation from 'shared/Navigation'
-import { FC, useState, useEffect } from 'react'
-import { CardWrapper, Container, PostGrid } from 'styles/shelf.module'
-import { Spin } from 'components/export'
 
 type post = {
   slug: string
@@ -13,26 +13,22 @@ type post = {
   published: string
 }
 
-const Shelf: FC = () => {
-  const [data, setData] = useState<post[]>([])
+type props = {
+  payload: post[]
+}
 
-  useEffect(() => {
-    butter.post.list({ page: 1, page_size: 20 }).then((res): void => {
-      res.data != undefined && setData(res.data.data)
-    })
-  }, [])
-
+const Shelf: FC<props> = ({ payload }) => {
   return (
     <Container>
       <Navigation />
 
-      {data.length === 0 ? (
+      {payload.length === 0 ? (
         <Spin />
       ) : (
         <PostGrid variants={animation} initial={'onMount'} animate={'mounted'}>
-          {data.map((item: post, key: number): JSX.Element => {
+          {payload.map((item: post, key: number): JSX.Element => {
             return (
-              <Link href={`/shelf/${item.slug}`} passHref key={key}>
+              <Link href={`/blog/${item.slug}`} passHref key={key}>
                 <CardWrapper variants={variant}>
                   <h4>{item.title}</h4>
                   <code>{moment(item.published).format('LL')}</code>
