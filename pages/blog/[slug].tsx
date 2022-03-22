@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import { ShelfPreview } from 'components/export'
 import type { NextPage } from 'next'
+import { useRouter } from 'next/router'
+import { ShelfPreview, Spin } from 'components/export'
 import { getPostBySlug, getPostAndMorePosts } from 'functions/serverless.butter'
 import { postProp } from 'types/post.d'
 
@@ -18,14 +19,26 @@ type staticProps = {
 }
 
 const Slug: NextPage<staticProps> = ({ post, previous, next }) => {
+  const router = useRouter()
+
+  if (!router.isFallback && !post?.slug) {
+    return <Spin />
+  }
+
   return (
     <>
-      <Head>
-        <title>Wale - {post.seo_title}</title>
-        <meta name='description' content={post.seo_title} />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-      <ShelfPreview data={post} prev={previous} next={next} />
+      {router.isFallback ? (
+        <Spin />
+      ) : (
+        <>
+          <Head>
+            <title>Wale - {post.seo_title}</title>
+            <meta name='description' content={post.seo_title} />
+            <link rel='icon' href='/favicon.ico' />
+          </Head>
+          <ShelfPreview data={post} prev={previous} next={next} />
+        </>
+      )}
     </>
   )
 }
@@ -51,6 +64,6 @@ export async function getStaticPaths() {
   const allPosts = await getPostBySlug()
   return {
     paths: allPosts?.map((post: any) => `/blog/${post.slug}`) || [],
-    fallback: false,
+    fallback: true,
   }
 }
