@@ -10,6 +10,14 @@ Wale Sebiiy
 <img src='./markdown/screen.png'>
 
 <br/>
+if you want to test this project localy make sure to add a `.env` or `.env.local` to your porject structure and add to these variables.
+
+```env
+NEXT_PUBLIC_BUTTERCMS=(butter cms api auth key)
+NEXT_PUBLIC_PREVIEW=(any string you want, avoid spaces)
+```
+
+<br/>
 
 | Technologies       | Description                                                                                                                                        |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
