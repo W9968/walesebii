@@ -13,10 +13,12 @@ const PreviewPost: FC<props> = ({ data, prev, next }) => {
   return (
     <Container>
       <Navigation />
-      <PreviewContainer>
-        <Title>{data.title}</Title>
-        <div dangerouslySetInnerHTML={{ __html: data.body }} />
-      </PreviewContainer>
+      {data && (
+        <PreviewContainer>
+          <Title>{data.title}</Title>
+          <div dangerouslySetInnerHTML={{ __html: data.body }} />
+        </PreviewContainer>
+      )}
     </Container>
   )
 }
