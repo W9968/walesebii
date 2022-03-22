@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import type { NextPage } from 'next'
-import { ShelfView } from 'components/export'
+import { ShelfView, Spin } from 'components/export'
 import { getAllPostsForHome } from 'functions/serverless.butter'
+import { Container } from 'styles/shelf.module'
+import Navigation from 'shared/Navigation'
 
 type staticProps = {
   payload: post[]
@@ -22,7 +24,10 @@ const index: NextPage<staticProps> = ({ payload }) => {
         <meta name='description' content='wale sebiiy personal portfolio' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      {payload.length > 0 && <ShelfView payload={payload} />}
+      <Container>
+        <Navigation />
+        {payload.length === 0 ? <Spin /> : <ShelfView payload={payload} />}
+      </Container>
     </>
   )
 }
