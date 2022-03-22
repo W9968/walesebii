@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 export const Container = styled.section`
-  min-height: 100vh;
   display: flex;
+  min-height: 100vh;
   align-items: center;
   flex-direction: column;
   padding: ${({ theme }) => theme.units._16};
@@ -37,7 +37,7 @@ export const CardWrapper = styled(motion.div)`
   }
 
   :hover {
-    transition: 200ms ease-in-out;
+    transition: 300ms ease-in-out;
     background: ${({ theme }) => theme.scheme.dominant};
 
     > p {

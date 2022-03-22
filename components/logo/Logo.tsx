@@ -34,8 +34,8 @@ const Button = styled(motion.button)`
 `
 
 const Svg = styled.svg`
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   > path {
     fill: ${({ theme }) => theme.scheme.background};
   }

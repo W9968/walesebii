@@ -6,7 +6,7 @@ const index: NextPage = () => {
   return (
     <>
       <Head>
-        <title>walee</title>
+        <title>Wale - Shelf</title>
         <meta name='description' content='wale sebiiy personal portfolio' />
         <link rel='icon' href='/favicon.ico' />
       </Head>

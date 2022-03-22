@@ -20,7 +20,7 @@ export const NavigationLink = styled.button`
   cursor: pointer;
   background: none;
   font-weight: 500;
-  padding: 10px 18px;
+  margin-left: 10px;
   border-radius: 12px;
   display: inline-block;
   letter-spacing: 0.5px;
@@ -29,8 +29,4 @@ export const NavigationLink = styled.button`
   transition: 300ms ease-in-out;
   font-size: ${({ theme }) => theme.units._16};
   color: ${({ theme }) => theme.scheme.background};
-
-  &:hover {
-    background: #eaeaea;
-  }
 `
