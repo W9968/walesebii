@@ -22,7 +22,7 @@ const index: NextPage<staticProps> = ({ payload }) => {
         <meta name='description' content='wale sebiiy personal portfolio' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <ShelfView payload={payload} />
+      {payload.length > 0 && <ShelfView payload={payload} />}
     </>
   )
 }

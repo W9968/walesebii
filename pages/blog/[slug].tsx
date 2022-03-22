@@ -32,7 +32,7 @@ const Slug: NextPage<staticProps> = ({ post, previous, next }) => {
       ) : (
         <>
           <Head>
-            <title>Wale - Post</title>
+            <title>Wale - {post.seo_title}</title>
           </Head>
           <ShelfPreview data={post} prev={previous} next={next} />
         </>

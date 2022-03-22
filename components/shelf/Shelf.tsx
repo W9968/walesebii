@@ -21,24 +21,19 @@ const Shelf: FC<props> = ({ payload }) => {
   return (
     <Container>
       <Navigation />
-
-      {payload.length === 0 ? (
-        <Spin />
-      ) : (
-        <PostGrid variants={animation} initial={'onMount'} animate={'mounted'}>
-          {payload.map((item: post, key: number): JSX.Element => {
-            return (
-              <Link href={`/blog/${item.slug}`} passHref key={key}>
-                <CardWrapper variants={variant}>
-                  <h4>{item.title}</h4>
-                  <code>{moment(item.published).format('LL')}</code>
-                  <p>{item.summary}</p>
-                </CardWrapper>
-              </Link>
-            )
-          })}
-        </PostGrid>
-      )}
+      <PostGrid variants={animation} initial={'onMount'} animate={'mounted'}>
+        {payload.map((item: post, key: number): JSX.Element => {
+          return (
+            <Link href={`/blog/${item.slug}`} passHref key={key}>
+              <CardWrapper variants={variant}>
+                <h4>{item.title}</h4>
+                <code>{moment(item.published).format('LL')}</code>
+                <p>{item.summary}</p>
+              </CardWrapper>
+            </Link>
+          )
+        })}
+      </PostGrid>
     </Container>
   )
 }
