@@ -1,60 +1,40 @@
-import styled, { keyframes, Keyframes } from 'styled-components'
-import { a } from '@react-spring/web'
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const LandingContainer = styled.div`
-  height: 100%;
+export const Container = styled(motion.div)`
+  flex: 1;
+  width: 100%;
   display: flex;
+  padding-bottom: 10%;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  justify-content: center;
 `
 
-export const Title = styled.div`
-  margin-top: -16%;
-  display: flex;
-`
-
-const gradient = keyframes`
-  0% { background-position: 0% 50%;  }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-`
-
-export const Heading = styled.div`
-  display: flex;
+export const Title = styled(motion.h1)`
+  font-size: 9vh;
+  font-weight: 700;
   user-select: none;
-  align-items: center;
-  justify-content: center;
-  -moz-user-select: none;
-  -webkit-user-select: none;
+  text-transform: capitalize;
+  will-change: transform, opacity;
+
+  @media (max-width: 1200px) {
+    font-size: 8vw;
+  }
 
   & .animated {
     background-clip: text;
     background: linear-gradient(
-      90deg,
-      #a0e9ff 30%,
-      #a162e8 50%,
-      #f093b0 70%,
-      #edca85 94%
+      45deg,
+      hsl(180deg 63% 50%) 0%,
+      hsl(224deg 74% 36%) 50%,
+      hsl(267deg 86% 22%) 100%
     );
     background-size: 150% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: ${gradient} 10s ease infinite;
   }
-`
 
-export const TrailText = styled(a.div)`
-  width: 100%;
-  font-size: 9vh;
-  font-weight: 700;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  text-transform: capitalize;
-  will-change: transform, opacity;
-
-  > span {
-    overflow: hidden;
-  }
+  -moz-user-select: none;
+  -webkit-user-select: none;
 `

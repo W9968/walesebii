@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { FC } from 'react'
 import { NavigationLink, NavigationListContainer } from 'styles/header.module'
-import { arrayRoutesMenu, IrouteNavigation } from './routesMenu.interface'
 
 const Menu: FC = () => {
   return (
@@ -18,3 +17,10 @@ const Menu: FC = () => {
 }
 
 export default Menu
+
+type IrouteNavigation = {
+  path: string
+  name: string
+}
+
+const arrayRoutesMenu: IrouteNavigation[] = [{ path: '/blogs', name: 'shelf' }]

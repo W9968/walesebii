@@ -17,13 +17,12 @@ export const GlobalStyle = createGlobalStyle`
     backface-visibility:hidden;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    color: ${(props) => props.theme.scheme.foreground};
-    background-color: ${(props) => props.theme.scheme.background};
+    color: ${(props) => props.theme.scheme.background};
   }
   
   ::selection {
-    color: #111;
-    background-color: ${(props) => props.theme.scheme.foreground}
+    color: #fff;
+    background-color: blue
   }
   
   /* width */

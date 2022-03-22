@@ -1,3 +1,6 @@
-export { default as LayoutHeader } from './nav/Header'
-export { default as MenuLinkNavigation } from './navigation_menu/Menu'
-export { default as LandingView } from './landing/Landing'
+export { default as LandingSection } from './landing/LandingPage'
+export { default as ShelfView } from './shelf/Shelf'
+
+export { default as Logo } from './logo/Logo'
+export { default as Menu } from './menu/Menu'
+export { default as Spin } from './loader/Spinner'

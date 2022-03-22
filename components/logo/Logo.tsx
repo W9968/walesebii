@@ -24,24 +24,20 @@ const Logo: FC = () => {
 
 const Button = styled(motion.button)`
   border: none;
+  display: flex;
   outline: none;
   cursor: pointer;
   font-size: 20px;
+  align-items: center;
   background: transparent;
-
-  > p {
-    font-weight: 600;
-    font-family: 'Inter';
-    color: ${({ theme }) => theme.scheme.foreground};
-  }
+  justify-content: center;
 `
 
 const Svg = styled.svg`
-  width: 42px;
-  height: 42px;
-
+  width: 48px;
+  height: 48px;
   > path {
-    fill: ${({ theme }) => theme.scheme.foreground};
+    fill: ${({ theme }) => theme.scheme.background};
   }
 `
 

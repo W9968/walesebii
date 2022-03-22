@@ -6,11 +6,10 @@ declare module 'styled-components' {
     scheme: {
       background: string
       foreground: string
-    }
+      dominant: string
 
-    accent: {
-      light_forground: string
-      light_background: string
+      accent_1: string
+      accent_2: string
     }
 
     units: {
@@ -26,12 +25,12 @@ declare module 'styled-components' {
 export const theming: DefaultTheme = {
   scheme: {
     background: '#000000',
-    foreground: '#fefbfc',
-  },
+    foreground: '#fffffc',
+    // dominant: '#96e6a1',
+    dominant: '#4facfe',
 
-  accent: {
-    light_forground: '#747172',
-    light_background: '#121212',
+    accent_1: '#f9f9f9',
+    accent_2: '#596164',
   },
 
   units: {
