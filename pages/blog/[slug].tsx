@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { ShelfPreview, Spin } from 'components/export'
@@ -31,11 +30,6 @@ const Slug: NextPage<staticProps> = ({ post, previous, next }) => {
         <Spin />
       ) : (
         <>
-          <Head>
-            <title>Wale - {post.seo_title}</title>
-            <meta name='description' content={post.seo_title} />
-            <link rel='icon' href='/favicon.ico' />
-          </Head>
           <ShelfPreview data={post} prev={previous} next={next} />
         </>
       )}
