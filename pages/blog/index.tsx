@@ -34,10 +34,9 @@ const index: NextPage<staticProps> = ({ payload }) => {
 
 export default index
 
-export async function getStaticProps({ preview = null }) {
+export async function getServerSideProps({ preview = null }) {
   const payload = (await getAllPostsForHome(preview)) || []
   return {
     props: { payload },
-    revalidate: 10,
   }
 }
