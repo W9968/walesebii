@@ -55,6 +55,7 @@ export async function getStaticProps({ params, preview = null }: param) {
       next,
       previous,
     },
+    revalidate: 1,
   }
 }
 
