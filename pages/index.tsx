@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import type { NextPage } from 'next'
-import LandingPage from 'components/landing/LandingPage'
-import Wrapper from 'shared/Wrapper'
+import ThreeWrapper from 'shared/ThreeWrapper'
+import { SubscribeNews, LandingSection } from 'components/export'
 
 const Home: NextPage = () => {
   return (
@@ -11,10 +11,9 @@ const Home: NextPage = () => {
         <meta name='description' content='wale sebiiy personal portfolio' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <LandingPage />
-      <Wrapper background='b'>
-        <p>gello</p>
-      </Wrapper>
+      <LandingSection />
+      <SubscribeNews />
+      <ThreeWrapper />
     </>
   )
 }
