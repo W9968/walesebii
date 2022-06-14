@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import Wrapper from 'shared/Wrapper'
 import { postProp } from 'types/post'
 import Navigation from 'shared/Navigation'
 import { Container, PreviewContainer, Title } from 'styles/preview.module'
@@ -11,13 +12,13 @@ type props = {
 
 const PreviewPost: FC<props> = ({ data, prev, next }) => {
   return (
-    <Container>
+    <Wrapper background='g'>
       <Navigation />
       <PreviewContainer>
         <Title>{data.title}</Title>
         <div dangerouslySetInnerHTML={{ __html: data.body }} />
       </PreviewContainer>
-    </Container>
+    </Wrapper>
   )
 }
 

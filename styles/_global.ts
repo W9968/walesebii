@@ -47,7 +47,7 @@ export const GlobalStyle = createGlobalStyle`
   h4 { line-height: 1.2em }
   p { line-height: 1.375em }
   h2,h3 { line-height: 1.25em}
-  button, input, a {
+  button, input, a, canvas {
     font-family: 'Inter', sans-serif;
   }
 `
