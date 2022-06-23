@@ -13,8 +13,9 @@ import 'prismjs/themes/prism-tomorrow.min.css'
 const Slug: NextPage<PageProp> = ({ post, previous, next }) => {
   const { isFallback } = useRouter()
 
-  typeof window !== 'undefined' && Prism.highlightAll()
-  useEffect(() => {}, [])
+  useEffect(() => {
+    typeof window !== 'undefined' && Prism.highlightAll()
+  }, [])
 
   if (!isFallback && !post.slug) {
     return <Error statusCode={404} />
