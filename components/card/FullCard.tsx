@@ -6,7 +6,7 @@ import Text from 'components/text/Text'
 import { BiRightArrowAlt, BiLeftArrowAlt } from 'react-icons/bi'
 
 const FullCard: FC<ComponentProp> = function ({ title, body, prev, next }) {
-  const { push, reload } = useRouter()
+  const { push } = useRouter()
   return (
     <StyledCardFull>
       <Text color={'white'} size={42} weight={700} content={title} />
