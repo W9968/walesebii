@@ -6,6 +6,8 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
 } from 'next/document'
+import { Fragment } from 'react'
+
 import { ServerStyleSheet } from 'styled-components'
 
 class MyDocument extends Document {
@@ -25,12 +27,12 @@ class MyDocument extends Document {
       const initialProps = await Document.getInitialProps(ctx)
       return {
         ...initialProps,
-        styles: (
-          <>
+        styles: [
+          <Fragment key={'initial-render'}>
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </>
-        ),
+          </Fragment>,
+        ],
       }
     } finally {
       sheet.seal()
@@ -48,7 +50,11 @@ class MyDocument extends Document {
             crossOrigin=''
           />
           <link
-            href='https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'
+            href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap'
+            rel='stylesheet'
+          />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap'
             rel='stylesheet'
           />
         </Head>

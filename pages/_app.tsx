@@ -1,13 +1,17 @@
-import { theming } from 'types/styled.d'
+import Layout from 'layout/Layout'
 import type { AppProps } from 'next/app'
+
+import { GlobalStyle } from 'styles/@global'
 import { ThemeProvider } from 'styled-components'
-import { GlobalStyle } from 'styles/_global'
+import { darkTheme } from 'theme/theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theming}>
+    <ThemeProvider theme={darkTheme}>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   )
 }
